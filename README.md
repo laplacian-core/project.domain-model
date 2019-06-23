@@ -12,7 +12,7 @@ The model which expresses the logical structure of laplacian-based projects and 
 
 The following diagram summarizes the structure of the model:
 
-![](https://raw.githubusercontent.com/nabla-squared/laplacian.model.metamodel/master/doc/image/model-diagram.svg?sanitize=true)
+![](https://raw.githubusercontent.com/nabla-squared/laplacian.model.project/master/doc/image/model-diagram.svg?sanitize=true)
 
 
 As shown in above diagram, this model depends on the following external models.
