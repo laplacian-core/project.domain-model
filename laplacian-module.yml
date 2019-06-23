@@ -3,6 +3,7 @@ project:
   type: model
   group: laplacian
   version: "1.0.0"
+  repository: "https://github.com/nabla-squared/laplacian.model.project"
   description: |
     The model which expresses the logical structure of laplacian-based projects and modules
 
