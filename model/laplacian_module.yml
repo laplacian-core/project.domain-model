@@ -1,0 +1,123 @@
+entities:
+- name: laplacian_module
+  namespace: laplacian.project
+
+  examples:
+  - group: laplacian
+    type: model
+    name: metamodel
+    version: "1.0.0"
+    repository: "https://github.com/nabla-squared/laplacian.model.metamodel"
+
+    models:
+    - group: laplacian
+      name: metamodel
+      version: "1.0.0"
+
+    templates:
+    - group: laplacian
+      name: entity
+      subname: kotlin
+      version: "1.0.0"
+
+  properties:
+  - name: name
+    type: string
+    primary_key: true
+    example_values:
+    - metamodel
+
+  - name: group
+    type: string
+    primary_key: true
+    example_values:
+    - laplacian
+
+  - name: type
+    type: string
+    optional: true
+    domain:
+      choices:
+      - value: generator
+      - value: template
+      - value: model
+      - value: plugin
+    default_value: |
+      "generator"
+    example_values:
+    - model
+
+  - name: subname
+    type: string
+    primary_key: true
+    optional: true
+
+  - name: version
+    type: string
+    example_values:
+    - "1.0.0"
+
+  - name: description
+    type: string
+    optional: true
+    default_value: |
+      "${group.toUpperCase()}/${name.toUpperCase()} - a laplacian $type project"
+    example_values:
+    - LAPLACIAN/METAMODEL - a laplacian model project
+
+  - name: repository
+    type: string
+    optional: true
+    description: |
+      The url of the code repository this project is hosted
+
+  - name: module_signature
+    type: string
+    multiple: true
+    snippet: |
+      listOfNotNull(group, type, name, subname)
+    example_values:
+    - ["laplacian", "model", "metamodel"]
+
+  - name: module_id
+    type: string
+    snippet: |
+      moduleSignature.map(String::lowerHyphenize).joinToString(".")
+    example_values:
+    - laplacian.model.metamodel
+
+  - name: artifact_id
+    type: string
+    snippet: |
+      "$group:$moduleId:$version"
+    example_values:
+    - laplacian:laplacian.model.metamodel:1.0.0
+
+  - name: for_template
+    type: boolean
+    snippet: |
+      type == "template"
+    example_values:
+    - false
+
+  - name: for_model
+    type: boolean
+    snippet: |
+      type == "model"
+    example_values:
+    - true
+
+  - name: for_plugin
+    type: boolean
+    snippet:
+      type == "plugin"
+    example_values:
+    - false
+
+  - name: for_generator
+    type: boolean
+    snippet:
+      type == "generator"
+    example_values:
+    - false
+

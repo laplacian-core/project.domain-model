@@ -1,0 +1,80 @@
+entities:
+- name: laplacian_module_dependency
+
+  properties:
+  - name: group
+    type: string
+
+  - name: name
+    type: string
+
+  - name: subname
+    type: string
+    optional: true
+
+  - name: version
+    type: string
+
+  - name: type
+    type: string
+
+  relationships:
+  - name: depends_to
+    reference_entity_name: laplacian_module
+    cardinality: "1"
+    mappings:
+    - from: name
+      to: name
+    - from: group
+      to: group
+    - from: subname
+      to: subname
+
+- name: laplacian_model_dependency
+  subtype_of: laplacian_module_dependency
+  subtype_key_value: model
+
+  properties:
+  - name: type
+    type: string
+    snippet: |
+      "model"
+
+  relationships:
+  - name: depended_by
+    reference_entity_name: laplacian_project
+    cardinality: "1"
+    reverse_of: models
+
+- name: laplacian_template_dependency
+  subtype_of: laplacian_module_dependency
+  subtype_key_value: template
+
+  properties:
+  - name: type
+    type: string
+    snippet: |
+      "template"
+
+  relationships:
+  - name: depended_by
+    reference_entity_name: laplacian_project
+    cardinality: "1"
+    reverse_of: templates
+
+- name: laplacian_plugin_dependency
+  subtype_of: laplacian_module_dependency
+  subtype_key_value: plugin
+
+  properties:
+  - name: type
+    type: string
+    snippet: |
+      "plugin"
+
+  relationships:
+  - name: depended_by
+    reference_entity_name: laplacian_project
+    cardinality: "1"
+    reverse_of: plugins
+

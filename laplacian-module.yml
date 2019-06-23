@@ -1,0 +1,30 @@
+project:
+  name: project
+  type: model
+  group: laplacian
+  version: "1.0.0"
+  description: |
+    The model which expresses the logical structure of laplacian-based projects and modules
+
+  models:
+  - group: laplacian
+    name: metamodel
+    version: "1.0.0"
+
+  templates:
+  - group: laplacian
+    name: entity
+    subname: kotlin
+    version: "1.0.0"
+
+  - group: laplacian
+    name: entity
+    subname: spec-junit5
+    version: "1.0.0"
+
+  - group: laplacian
+    name: entity
+    subname: document
+    version: "1.0.0"
+
+
