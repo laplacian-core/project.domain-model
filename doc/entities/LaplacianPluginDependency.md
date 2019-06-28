@@ -18,6 +18,6 @@ The type of this laplacian_plugin_dependency.
 
 ## Relationships
 
-### depended_by: `LaplacianProject`
-depended_by
+### generator: `LaplacianGenerator`
+generator
 - **Cardinality:** `1`

@@ -2,7 +2,7 @@ package laplacian.project.record
 import com.github.jknack.handlebars.Context
 import laplacian.gradle.task.generate.model.Project
 import laplacian.project.model.LaplacianPluginDependency
-import laplacian.project.model.LaplacianProject
+import laplacian.project.model.LaplacianGenerator
 import laplacian.util.*
 /**
  * laplacian_plugin_dependency
@@ -10,14 +10,9 @@ import laplacian.util.*
 data class LaplacianPluginDependencyRecord (
     private val __record: Record,
     private val _context: Context,
-    override val dependedBy: LaplacianProject,
+    override val generator: LaplacianGenerator,
     private val _record: Record = __record.normalizeCamelcase()
 ): LaplacianModuleDependencyRecord(__record, _context), LaplacianPluginDependency, Record by _record {
-    /**
-     * The laplacian module project definition.
-     */
-    private val project: Project
-        get() = _context.get("project") as Project
 
 
     /**
@@ -30,9 +25,9 @@ data class LaplacianPluginDependencyRecord (
         /**
          * creates record list from list of map
          */
-        fun from(records: RecordList, _context: Context, dependedBy: LaplacianProject) = records
+        fun from(records: RecordList, _context: Context, generator: LaplacianGenerator) = records
             .map {
-                LaplacianPluginDependencyRecord(it, _context, dependedBy = dependedBy)
+                LaplacianPluginDependencyRecord(it, _context, generator = generator)
             }
     }
 }

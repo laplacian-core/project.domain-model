@@ -1,0 +1,47 @@
+entities:
+- name: laplacian_generator
+  namespace: laplacian.project
+
+  properties:
+  - name: name
+    type: string
+    primary_key: true
+
+  relationships:
+  - name: project
+    reference_entity_name: laplacian_project
+    cardinality: "1"
+    reverse_of: generators
+
+  - name: plugins
+    reference_entity_name: laplacian_plugin_dependency
+    cardinality: "*"
+    aggregate: true
+
+  - name: plugins_excluding_self
+    reference_entity_name: laplacian_plugin_dependency
+    cardinality: "*"
+    snippet: |
+      plugins.filter{ it != this }
+
+  - name: models
+    reference_entity_name: laplacian_model_dependency
+    cardinality: "*"
+    aggregate: true
+
+  - name: models_excluding_self
+    reference_entity_name: laplacian_model_dependency
+    cardinality: "*"
+    snippet: |
+      models.filter{ it != this }
+
+  - name: templates
+    reference_entity_name: laplacian_template_dependency
+    cardinality: "*"
+    aggregate: true
+
+  - name: templates_excluding_self
+    reference_entity_name: laplacian_template_dependency
+    cardinality: "*"
+    snippet: |
+      templates.filter{ it != this }

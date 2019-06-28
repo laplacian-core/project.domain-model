@@ -12,30 +12,7 @@ interface LaplacianProject : LaplacianModule {
      */
     val namespace: String
     /**
-     * plugins
+     * generators
      */
-    val plugins: List<LaplacianPluginDependency>
-    /**
-     * plugins_excluding_self
-     */
-    val pluginsExcludingSelf: List<LaplacianPluginDependency>
-        get() = plugins.filter{ it != this }
-    /**
-     * models
-     */
-    val models: List<LaplacianModelDependency>
-    /**
-     * models_excluding_self
-     */
-    val modelsExcludingSelf: List<LaplacianModelDependency>
-        get() = models.filter{ it != this }
-    /**
-     * templates
-     */
-    val templates: List<LaplacianTemplateDependency>
-    /**
-     * templates_excluding_self
-     */
-    val templatesExcludingSelf: List<LaplacianTemplateDependency>
-        get() = templates.filter{ it != this }
+    val generators: List<LaplacianGenerator>
 }

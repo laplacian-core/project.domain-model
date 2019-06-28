@@ -13,11 +13,6 @@ open class LaplacianModuleDependencyRecord (
     private val _context: Context,
     private val _record: Record = __record.normalizeCamelcase()
 ): LaplacianModuleDependency, Record by _record {
-    /**
-     * The laplacian module project definition.
-     */
-    private val project: Project
-        get() = _context.get("project") as Project
 
 
     /**

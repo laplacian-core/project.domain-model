@@ -1,5 +1,6 @@
 entities:
 - name: laplacian_module_dependency
+  namespace: laplacian.project
 
   properties:
   - name: group
@@ -41,8 +42,8 @@ entities:
       "model"
 
   relationships:
-  - name: depended_by
-    reference_entity_name: laplacian_project
+  - name: generator
+    reference_entity_name: laplacian_generator
     cardinality: "1"
     reverse_of: models
 
@@ -57,8 +58,8 @@ entities:
       "template"
 
   relationships:
-  - name: depended_by
-    reference_entity_name: laplacian_project
+  - name: generator
+    reference_entity_name: laplacian_generator
     cardinality: "1"
     reverse_of: templates
 
@@ -73,8 +74,8 @@ entities:
       "plugin"
 
   relationships:
-  - name: depended_by
-    reference_entity_name: laplacian_project
+  - name: generator
+    reference_entity_name: laplacian_generator
     cardinality: "1"
     reverse_of: plugins
 

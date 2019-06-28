@@ -13,39 +13,7 @@ entities:
           .joinToString(".")
 
   relationships:
-  - name: plugins
-    reference_entity_name: laplacian_plugin_dependency
-    cardinality: "*"
+  - name: generators
+    reference_entity_name: laplacian_generator
+    cardinality: '1..*'
     aggregate: true
-
-  - name: plugins_excluding_self
-    reference_entity_name: laplacian_plugin_dependency
-    cardinality: "*"
-    snippet: |
-      plugins.filter{ it != this }
-
-  - name: models
-    reference_entity_name: laplacian_model_dependency
-    cardinality: "*"
-    aggregate: true
-
-  - name: models_excluding_self
-    reference_entity_name: laplacian_model_dependency
-    cardinality: "*"
-    snippet: |
-      models.filter{ it != this }
-
-  - name: templates
-    reference_entity_name: laplacian_template_dependency
-    cardinality: "*"
-    aggregate: true
-
-  - name: templates_excluding_self
-    reference_entity_name: laplacian_template_dependency
-    cardinality: "*"
-    snippet: |
-      templates.filter{ it != this }
-
-
-
-

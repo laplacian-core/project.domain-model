@@ -3,9 +3,7 @@ import com.github.jknack.handlebars.Context
 import laplacian.gradle.task.generate.model.Project
 import laplacian.project.model.LaplacianProject
 import laplacian.project.model.LaplacianProjectList
-import laplacian.project.model.LaplacianPluginDependency
-import laplacian.project.model.LaplacianModelDependency
-import laplacian.project.model.LaplacianTemplateDependency
+import laplacian.project.model.LaplacianGenerator
 import laplacian.util.*
 /**
  * laplacian_project
@@ -15,11 +13,6 @@ data class LaplacianProjectRecord (
     private val _context: Context,
     private val _record: Record = __record.normalizeCamelcase()
 ): LaplacianModuleRecord(__record, _context), LaplacianProject, Record by _record {
-    /**
-     * The laplacian module project definition.
-     */
-    private val project: Project
-        get() = _context.get("project") as Project
 
 
     /**
@@ -33,22 +26,10 @@ data class LaplacianProjectRecord (
         }
 
     /**
-     * plugins
+     * generators
      */
-    override val plugins: List<LaplacianPluginDependency>
-        = LaplacianPluginDependencyRecord.from(_record.getList("plugins", emptyList()), _context, this)
-
-    /**
-     * models
-     */
-    override val models: List<LaplacianModelDependency>
-        = LaplacianModelDependencyRecord.from(_record.getList("models", emptyList()), _context, this)
-
-    /**
-     * templates
-     */
-    override val templates: List<LaplacianTemplateDependency>
-        = LaplacianTemplateDependencyRecord.from(_record.getList("templates", emptyList()), _context, this)
+    override val generators: List<LaplacianGenerator>
+        = LaplacianGeneratorRecord.from(_record.getList("generators"), _context, this)
 
     companion object {
         /**

@@ -8,7 +8,7 @@ import laplacian.util.*
  */
 interface LaplacianTemplateDependency : LaplacianModuleDependency {
     /**
-     * depended_by
+     * generator
      */
-    val dependedBy: LaplacianProject
+    val generator: LaplacianGenerator
 }
