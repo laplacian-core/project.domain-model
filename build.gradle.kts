@@ -1,3 +1,5 @@
+import laplacian.generator.entity.LaplacianGenerateEntityTask
+
 group = "laplacian"
 version = "1.0.0"
 
@@ -5,7 +7,7 @@ plugins {
     `maven-publish`
     `java-gradle-plugin`
     kotlin("jvm") version "1.3.10"
-    id("laplacian.model.metamodel") version "1.0.0"
+    id("laplacian.generator.entity") version "1.0.0"
 }
 
 repositories {
@@ -14,14 +16,8 @@ repositories {
     jcenter()
 }
 
-
-
-
 dependencies {
-    model("laplacian:laplacian.model-def.metamodel:1.0.0")
-    template("laplacian:laplacian.template.entity.kotlin:1.0.0")
-    template("laplacian:laplacian.template.entity.spec-junit5:1.0.0")
-    template("laplacian:laplacian.template.entity.document:1.0.0")
+    implementation("laplacian:laplacian.generator:1.0.0")
     implementation(kotlin("stdlib"))
     implementation(kotlin("reflect"))
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.2.0")
@@ -42,7 +38,8 @@ val sourcesJar by tasks.register<Jar>("sourceJar") {
 }
 
 val modelJar by tasks.register<Jar>("modelJar") {
-    from(laplacianGenerate.modelSpec.get().files)
+    val task = tasks.getByName("laplacianGenerateEntity") as LaplacianGenerateEntityTask
+    from(task.modelSpec.get().files)
     exclude("laplacian-module.*")
 }
 
