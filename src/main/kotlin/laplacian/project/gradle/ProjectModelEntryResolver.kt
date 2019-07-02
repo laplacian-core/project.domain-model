@@ -3,6 +3,8 @@ import laplacian.gradle.task.generate.ExecutionContext
 import laplacian.gradle.task.generate.ModelEntryResolver
 import laplacian.project.model.LaplacianModuleList
 import laplacian.project.record.LaplacianModuleRecord
+import laplacian.project.model.LaplacianGeneratorList
+import laplacian.project.record.LaplacianGeneratorRecord
 import laplacian.project.model.LaplacianProjectList
 import laplacian.project.record.LaplacianProjectRecord
 import laplacian.project.model.LaplacianModuleDependencyList
@@ -14,6 +16,7 @@ class ProjectModelEntryResolver: ModelEntryResolver {
     override fun resolves(key: String, model: Map<String, RecordList>): Boolean {
         return arrayOf(
             "laplacian_modules",
+            "laplacian_generators",
             "laplacian_projects",
             "laplacian_module_dependencies"
         ).any { it == key }
@@ -25,6 +28,12 @@ class ProjectModelEntryResolver: ModelEntryResolver {
                 model.getList<Record>("laplacian_modules")
                      .mergeWithKeys("name", "group", "subname")
                      .map{ LaplacianModuleRecord(it, context.currentModel) },
+                context.currentModel
+            )
+            "laplacian_generators" -> LaplacianGeneratorList(
+                model.getList<Record>("laplacian_generators")
+                     .mergeWithKeys("name", "group", "version")
+                     .map{ LaplacianGeneratorRecord(it, context.currentModel) },
                 context.currentModel
             )
             "laplacian_projects" -> LaplacianProjectList(

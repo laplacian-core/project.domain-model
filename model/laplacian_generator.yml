@@ -7,12 +7,21 @@ entities:
     type: string
     primary_key: true
 
-  relationships:
-  - name: project
-    reference_entity_name: laplacian_project
-    cardinality: "1"
-    reverse_of: generators
+  - name: group
+    type: string
+    primary_key: true
 
+  - name: version
+    type: string
+    primary_key: true
+
+  - name: description
+    type: string
+    optional: true
+    default_value: |
+      "A generator which creates ${name.pluralize()}"
+
+  relationships:
   - name: plugins
     reference_entity_name: laplacian_plugin_dependency
     cardinality: "*"

@@ -13,7 +13,26 @@ entities:
           .joinToString(".")
 
   relationships:
+  - name: parent_project
+    reference_entity_name: laplacian_project
+    cardinality: '0..1'
+    mappings:
+    - from: group
+      to: name
+
+  - name: subprojects
+    reference_entity_name: laplacian_project
+    cardinality: '*'
+    mappings:
+    - from: name
+      to: group
+
   - name: generators
     reference_entity_name: laplacian_generator
-    cardinality: '1..*'
-    aggregate: true
+    cardinality: '*'
+    mappings:
+    - from: name
+      to: name
+    - from: group
+      to: group
+

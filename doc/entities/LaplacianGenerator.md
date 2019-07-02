@@ -13,11 +13,22 @@ laplacian_generator
 The name of this laplacian_generator.
 - **Attributes:** *PK*
 
-## Relationships
+### group: `String`
+The group of this laplacian_generator.
+- **Attributes:** *PK*
 
-### project: `LaplacianProject`
-project
-- **Cardinality:** `1`
+### version: `String`
+The version of this laplacian_generator.
+- **Attributes:** *PK*
+
+### description: `String`
+The description of this laplacian_generator.
+- **Default Value:**
+  ```kotlin
+  "A generator which creates ${name.pluralize()}"
+  ```
+
+## Relationships
 
 ### plugins: `List<LaplacianPluginDependency>`
 plugins

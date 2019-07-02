@@ -12,9 +12,17 @@ interface LaplacianGenerator {
      */
     val name: String
     /**
-     * project
+     * The group of this laplacian_generator.
      */
-    val project: LaplacianProject
+    val group: String
+    /**
+     * The version of this laplacian_generator.
+     */
+    val version: String
+    /**
+     * The description of this laplacian_generator.
+     */
+    val description: String
     /**
      * plugins
      */

@@ -2,7 +2,7 @@ package laplacian.project.record
 import com.github.jknack.handlebars.Context
 import laplacian.gradle.task.generate.model.Project
 import laplacian.project.model.LaplacianGenerator
-import laplacian.project.model.LaplacianProject
+import laplacian.project.model.LaplacianGeneratorList
 import laplacian.project.model.LaplacianPluginDependency
 import laplacian.project.model.LaplacianModelDependency
 import laplacian.project.model.LaplacianTemplateDependency
@@ -13,7 +13,6 @@ import laplacian.util.*
 data class LaplacianGeneratorRecord (
     private val __record: Record,
     private val _context: Context,
-    override val project: LaplacianProject,
     private val _record: Record = __record.normalizeCamelcase()
 ): LaplacianGenerator, Record by _record {
 
@@ -23,6 +22,26 @@ data class LaplacianGeneratorRecord (
      */
     override val name: String
         get() = getOrThrow("name")
+
+    /**
+     * The group of this laplacian_generator.
+     */
+    override val group: String
+        get() = getOrThrow("group")
+
+    /**
+     * The version of this laplacian_generator.
+     */
+    override val version: String
+        get() = getOrThrow("version")
+
+    /**
+     * The description of this laplacian_generator.
+     */
+    override val description: String
+        get() = getOrThrow("description") {
+            "A generator which creates ${name.pluralize()}"
+        }
 
     /**
      * plugins
@@ -46,30 +65,31 @@ data class LaplacianGeneratorRecord (
         /**
          * creates record list from list of map
          */
-        fun from(records: RecordList, _context: Context, project: LaplacianProject) = records
-            .mergeWithKeys("name")
-            .map {
-                LaplacianGeneratorRecord(it, _context, project = project)
-            }
+        fun from(_context: Context): LaplacianGeneratorList {
+            return _context.get("laplacian_generators") as LaplacianGeneratorList
+        }
     }
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other !is LaplacianGeneratorRecord) return false
-        if (project != other.project) return false
         if (name != other.name) return false
+        if (group != other.group) return false
+        if (version != other.version) return false
         return true
     }
 
     override fun hashCode(): Int {
-        var result = project.hashCode()
-        result = 31 * result + name.hashCode()
+        var result = name.hashCode()
+        result = 31 * result + group.hashCode()
+        result = 31 * result + version.hashCode()
         return result
     }
 
     override fun toString(): String {
         return "LaplacianGeneratorRecord(" +
-            "project=$project, " +
-            "name=$name" +
+            "name=$name, " +
+            "group=$group, " +
+            "version=$version" +
         ")"
     }
 }

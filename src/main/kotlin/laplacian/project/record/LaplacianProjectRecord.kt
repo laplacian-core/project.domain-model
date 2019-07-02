@@ -26,10 +26,29 @@ data class LaplacianProjectRecord (
         }
 
     /**
+     * parent_project
+     */
+    override val parentProject: LaplacianProject?
+        get() = LaplacianProjectRecord.from(_context).find {
+            it.name == group
+        }
+
+    /**
+     * subprojects
+     */
+    override val subprojects: List<LaplacianProject>
+        get() = LaplacianProjectRecord.from(_context).filter {
+            it.group == name
+        }
+
+    /**
      * generators
      */
     override val generators: List<LaplacianGenerator>
-        = LaplacianGeneratorRecord.from(_record.getList("generators"), _context, this)
+        get() = LaplacianGeneratorRecord.from(_context).filter {
+            it.name == name &&
+            it.group == group
+        }
 
     companion object {
         /**

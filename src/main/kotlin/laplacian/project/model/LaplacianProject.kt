@@ -12,6 +12,14 @@ interface LaplacianProject : LaplacianModule {
      */
     val namespace: String
     /**
+     * parent_project
+     */
+    val parentProject: LaplacianProject?
+    /**
+     * subprojects
+     */
+    val subprojects: List<LaplacianProject>
+    /**
      * generators
      */
     val generators: List<LaplacianGenerator>

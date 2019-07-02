@@ -20,6 +20,14 @@ The namespace of this laplacian_project.
 
 ## Relationships
 
+### parent_project: `LaplacianProject?`
+parent_project
+- **Cardinality:** `0..1`
+
+### subprojects: `List<LaplacianProject>`
+subprojects
+- **Cardinality:** `*`
+
 ### generators: `List<LaplacianGenerator>`
 generators
-- **Cardinality:** `1..*`
+- **Cardinality:** `*`

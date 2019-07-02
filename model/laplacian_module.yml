@@ -120,4 +120,3 @@ entities:
       type == "generator"
     example_values:
     - false
-
