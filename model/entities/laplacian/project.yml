@@ -1,0 +1,83 @@
+entities:
+- name: project
+  namespace: laplacian.project
+
+  properties:
+  - name: group
+    type: string
+    primary_key: true
+
+  - name: name
+    type: string
+    primary_key: true
+
+  - name: type
+    type: string
+    optional: true
+    domain:
+      choices:
+      - value: generator
+      - value: template
+      - value: model
+      - value: schema
+      - value: plugin
+    default_value: |
+      "generator"
+
+  - name: version
+    type: string
+
+  - name: namespace
+    type: string
+    optional: true
+    default_value: |
+      listOf(group, name)
+          .map{ it.lowerUnderscorize() }
+          .joinToString(".")
+    example_values:
+    - "laplacian.model.metamodel"
+
+  - name: description
+    type: string
+    optional: true
+    default_value: |
+      "${group}:${name}"
+
+  - name: base_dir
+    type: string
+    optional: true
+    default_value: |
+      "subprojects/${group}.${name}"
+    example_values:
+    - "subprojects/laplacian.model.metamodel"
+
+  relationships:
+  - name: parent_project
+    reference_entity_name: project
+    cardinality: '0..1'
+    reverse_of: subprojects
+
+  - name: subprojects
+    reference_entity_name: project
+    cardinality: '*'
+    aggregate: true
+
+  - name: source_repository
+    reference_entity_name: source_repository
+    cardinality: '0..1'
+    aggregate: true
+
+  - name: models
+    reference_entity_name: module
+    cardinality: '*'
+    aggregate: true
+
+  - name: templates
+    reference_entity_name: module
+    cardinality: '*'
+    aggregate: true
+
+  - name: schemas
+    reference_entity_name: module
+    cardinality: '*'
+    aggregate: true

@@ -1,0 +1,19 @@
+entities:
+- name: module
+  namespace: laplacian.project
+  value_object: true
+
+  properties:
+  - name: name
+    type: string
+
+  - name: group
+    type: string
+
+  - name: version
+    type: string
+
+  - name: artifact_id
+    type: string
+    snippet: |
+      "$group:$group.$name:$version"

@@ -1,0 +1,15 @@
+entities:
+- name: source_repository
+  namespace: laplacian.project
+  value_object: true
+
+  properties:
+  - name: url
+    type: string
+
+  - name: branch
+    type: string
+    optional: true
+    default_value: |
+      "master"
+
