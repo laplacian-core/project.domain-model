@@ -1,6 +1,7 @@
 entities:
 - name: project
   namespace: laplacian.project
+  singly_rooted: true
 
   properties:
   - name: group
