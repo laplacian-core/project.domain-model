@@ -84,6 +84,10 @@ subprojects
 source_repository
 - **Cardinality:** `0..1`
 
+### document: `Document?`
+document
+- **Cardinality:** `0..1`
+
 ### models: `List<Module>`
 models
 - **Cardinality:** `*`

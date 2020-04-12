@@ -13,6 +13,14 @@ The following diagram summarizes the structure of the model:
 ![](./doc/image/model-diagram.svg)
 
 ## Entities
+### [Document](./doc/entities/Document.md)
+
+document
+
+### [Section](./doc/entities/Section.md)
+
+section
+
 ### [Module](./doc/entities/Module.md)
 
 module

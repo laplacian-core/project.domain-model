@@ -1,0 +1,21 @@
+entities:
+- name: section
+  namespace: laplacian.project.document
+
+  properties:
+  - name: title
+    type: string
+
+  - name: content
+    type: string
+
+  relationships:
+  - name: sub_sections
+    reference_entity_name: section
+    cardinality: '*'
+    aggregate: true
+
+  - name: parent_section
+    reference_entity_name: section
+    cardinality: '1'
+    reverse_of: sub_sections

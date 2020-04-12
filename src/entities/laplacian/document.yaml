@@ -1,0 +1,42 @@
+entities:
+- name: document
+  namespace: laplacian.project
+
+  properties:
+  - name: title
+    type: string
+    optional: true
+    default_value: |
+      "${project.group}/${project.name}"
+
+  - name: author
+    type: string
+    optional: true
+
+  - name: rights
+    type: string
+    optional: true
+
+  - name: language
+    type: string
+    optional: true
+    default_value: |
+      "en-US"
+
+  - name: abstract
+    type: string
+    optional: true
+    default_value: |
+      "${project.description}"
+
+  relationships:
+  - name: project
+    reference_entity_name: project
+    cardinality: '1'
+    reverse_of: document
+
+  - name: sections
+    reference_entity_name: section
+    cardinality: '*'
+    aggregate: true
+

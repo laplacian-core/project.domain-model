@@ -68,6 +68,11 @@ entities:
     cardinality: '0..1'
     aggregate: true
 
+  - name: document
+    reference_entity_name: document
+    cardinality: '0..1'
+    aggregate: true
+
   - name: models
     reference_entity_name: module
     cardinality: '*'
