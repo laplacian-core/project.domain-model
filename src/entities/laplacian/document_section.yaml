@@ -22,5 +22,5 @@ entities:
 
   - name: parent_section
     reference_entity_name: section
-    cardinality: '1'
+    cardinality: '0..1'
     reverse_of: sub_sections
