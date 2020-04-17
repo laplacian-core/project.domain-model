@@ -19,7 +19,7 @@ The content of this section.
 The included_if of this section.
 - **Default Value:**
   ```kotlin
-  'true'
+  "true"
   ```
 
 ## Relationships
