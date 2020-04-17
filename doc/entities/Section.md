@@ -28,6 +28,6 @@ The included_if of this section.
 sub_sections
 - **Cardinality:** `*`
 
-### parent_section: `Section`
+### parent_section: `Section?`
 parent_section
-- **Cardinality:** `1`
+- **Cardinality:** `0..1`
