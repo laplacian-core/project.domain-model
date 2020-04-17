@@ -10,7 +10,8 @@ project:
     url: https://github.com/nabla-squared/laplacian.project.schema-model.git
     branch: master
   subprojects: []
-  schemas:
+  schemas: []
+  plugins:
   - group: laplacian
     name: schema.metamodel
     version: '1.0.0'

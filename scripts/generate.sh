@@ -48,7 +48,7 @@ file_list() {
 #
 generate() {
   ${SCRIPT_BASE_DIR}/laplacian-generate.sh \
-    --schema 'laplacian:laplacian.schema.metamodel:1.0.0' \
+    --plugin 'laplacian:laplacian.schema.metamodel:1.0.0' \
     --template 'laplacian:laplacian.project-base.template:1.0.0' \
     --template 'laplacian:laplacian.schema-doc.template:1.0.0' \
     --model 'laplacian:laplacian.project.schema-model:1.0.0' \
