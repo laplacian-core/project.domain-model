@@ -15,6 +15,13 @@ The title of this section.
 ### content: `String`
 The content of this section.
 
+### included_if: `String`
+The included_if of this section.
+- **Default Value:**
+  ```kotlin
+  true
+  ```
+
 ## Relationships
 
 ### sub_sections: `List<Section>`

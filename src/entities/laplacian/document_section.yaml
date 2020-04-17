@@ -9,6 +9,11 @@ entities:
   - name: content
     type: string
 
+  - name: included_if
+    type: string
+    default_value: |
+      true
+
   relationships:
   - name: sub_sections
     reference_entity_name: section
