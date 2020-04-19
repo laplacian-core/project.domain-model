@@ -47,10 +47,12 @@ entities:
   - name: model_files
     type: string
     multiple: true
+    optional: true
 
   - name: template_files
     type: string
     multiple: true
+    optional: true
 
   - name: base_dir
     type: string
