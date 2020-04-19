@@ -44,6 +44,14 @@ entities:
     default_value: |
       "${group}:${name}"
 
+  - name: model_files
+    type: string
+    multiple: true
+
+  - name: template_files
+    type: string
+    multiple: true
+
   - name: base_dir
     type: string
     optional: true
@@ -53,6 +61,13 @@ entities:
     - "subprojects/laplacian.model.metamodel"
 
   relationships:
+  - name: project_type
+    reference_entity_name: project_type
+    cardinality: '1'
+    mappings:
+    - from: type
+      to: name
+
   - name: parent_project
     reference_entity_name: project
     cardinality: '0..1'
@@ -83,7 +98,8 @@ entities:
     cardinality: '*'
     aggregate: true
 
-  - name: schemas
+  - name: plugins
     reference_entity_name: module
     cardinality: '*'
     aggregate: true
+

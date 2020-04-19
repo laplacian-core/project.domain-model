@@ -63,6 +63,12 @@ The description of this project.
   "${group}:${name}"
   ```
 
+### model_files: `List<String>`
+The model_files of this project.
+
+### template_files: `List<String>`
+The template_files of this project.
+
 ### base_dir: `String`
 The base_dir of this project.
 - **Default Value:**
@@ -71,6 +77,10 @@ The base_dir of this project.
   ```
 
 ## Relationships
+
+### project_type: `ProjectType`
+project_type
+- **Cardinality:** `1`
 
 ### parent_project: `Project?`
 parent_project
@@ -96,6 +106,6 @@ models
 templates
 - **Cardinality:** `*`
 
-### schemas: `List<Module>`
-schemas
+### plugins: `List<Module>`
+plugins
 - **Cardinality:** `*`

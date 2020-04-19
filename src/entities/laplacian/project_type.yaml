@@ -1,0 +1,29 @@
+entities:
+- name: project_type
+  namespace: laplacian.project
+
+  properties:
+  - name: name
+    type: string
+
+  - name: description
+    type: string
+    optional: true
+    default_value: |
+      name
+
+  relationships:
+  - name: models
+    reference_entity_name: module
+    cardinality: '*'
+    aggregate: true
+
+  - name: templates
+    reference_entity_name: module
+    cardinality: '*'
+    aggregate: true
+
+  - name: plugins
+    reference_entity_name: module
+    cardinality: '*'
+    aggregate: true

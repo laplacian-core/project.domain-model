@@ -13,7 +13,7 @@ project:
   schemas: []
   plugins:
   - group: laplacian
-    name: schema.metamodel
+    name: metamodel-plugin
     version: '1.0.0'
   - group: laplacian
     name: project.schema-plugin
@@ -26,11 +26,12 @@ project:
     name: schema-doc.template
     version: '1.0.0'
   models:
-  - group: laplacian
-    name: project.schema-model
-    version: '1.0.0'
+#  - group: laplacian
+#    name: project.schema-model
+#    version: '1.0.0'
   - group: laplacian
     name: project-doc.content
     version: '1.0.0'
-  model_files: []
+  model_files:
+  - src/
   template_files: []

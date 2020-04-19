@@ -50,6 +50,8 @@ The following diagram summarizes the structure of the model:
   module
 - [**Project**](<./doc/entities/Project.md>)
   project
+- [**ProjectType**](<./doc/entities/ProjectType.md>)
+  project_type
 - [**SourceRepository**](<./doc/entities/SourceRepository.md>)
   source_repository
 
@@ -67,6 +69,8 @@ The following diagram summarizes the structure of the model:
 
 [src/entities/laplacian/source_repository.yaml](<./src/entities/laplacian/source_repository.yaml>)
 
+[src/entities/laplacian/project_type.yaml](<./src/entities/laplacian/project_type.yaml>)
+
 [src/entities/laplacian/project/examples.yaml](<./src/entities/laplacian/project/examples.yaml>)
 
 [src/entities/laplacian/project.yml](<./src/entities/laplacian/project.yml>)
@@ -82,6 +86,8 @@ The following diagram summarizes the structure of the model:
 [doc/entities/Document.md](<./doc/entities/Document.md>)
 
 [doc/entities/Module.md](<./doc/entities/Module.md>)
+
+[doc/entities/ProjectType.md](<./doc/entities/ProjectType.md>)
 
 [doc/entities/DocumentChapter.md](<./doc/entities/DocumentChapter.md>)
 
