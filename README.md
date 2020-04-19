@@ -5,7 +5,7 @@ A model which expresses the logical structure of laplacian-based projects and mo
 
 <!-- @head-content@ -->
 
-<!-- @toc -->
+<!-- @toc@ -->
 ## Table of contents
 1. [Usage](#usage)
 
@@ -15,9 +15,9 @@ A model which expresses the logical structure of laplacian-based projects and mo
 
 
 
-<!-- @toc -->
+<!-- @toc@ -->
 
-<!-- @main-content -->
+<!-- @main-content@ -->
 ## Usage
 
 Add the following entry to your project definition.
@@ -61,27 +61,9 @@ The following diagram summarizes the structure of the model:
 ## Source list
 
 
-[src/entities/laplacian/module.yaml](<./src/entities/laplacian/module.yaml>)
+[README.md](<./README.md>)
 
-[src/entities/laplacian/document_section.yaml](<./src/entities/laplacian/document_section.yaml>)
-
-[src/entities/laplacian/document.yaml](<./src/entities/laplacian/document.yaml>)
-
-[src/entities/laplacian/source_repository.yaml](<./src/entities/laplacian/source_repository.yaml>)
-
-[src/entities/laplacian/project_type.yaml](<./src/entities/laplacian/project_type.yaml>)
-
-[src/entities/laplacian/project/examples.yaml](<./src/entities/laplacian/project/examples.yaml>)
-
-[src/entities/laplacian/project.yml](<./src/entities/laplacian/project.yml>)
-
-[.editorconfig](<./.editorconfig>)
-
-[.gitignore](<./.gitignore>)
-
-[doc/image/model-diagram.svg](<./doc/image/model-diagram.svg>)
-
-[doc/entities/Section.md](<./doc/entities/Section.md>)
+[doc/entities/DocumentChapter.md](<./doc/entities/DocumentChapter.md>)
 
 [doc/entities/Document.md](<./doc/entities/Document.md>)
 
@@ -89,22 +71,40 @@ The following diagram summarizes the structure of the model:
 
 [doc/entities/ProjectType.md](<./doc/entities/ProjectType.md>)
 
-[doc/entities/DocumentChapter.md](<./doc/entities/DocumentChapter.md>)
+[doc/entities/Project.md](<./doc/entities/Project.md>)
+
+[doc/entities/Section.md](<./doc/entities/Section.md>)
 
 [doc/entities/SourceRepository.md](<./doc/entities/SourceRepository.md>)
 
-[doc/entities/Project.md](<./doc/entities/Project.md>)
+[doc/image/model-diagram.svg](<./doc/image/model-diagram.svg>)
 
-[README.md](<./README.md>)
+[.editorconfig](<./.editorconfig>)
 
 [.gitattributes](<./.gitattributes>)
 
-[model/project.yaml](<./model/project.yaml>)
+[.gitignore](<./.gitignore>)
 
 [model/project/sources.yaml](<./model/project/sources.yaml>)
 
+[model/project.yaml](<./model/project.yaml>)
+
+[src/entities/laplacian/document_section.yaml](<./src/entities/laplacian/document_section.yaml>)
+
+[src/entities/laplacian/document.yaml](<./src/entities/laplacian/document.yaml>)
+
+[src/entities/laplacian/module.yaml](<./src/entities/laplacian/module.yaml>)
+
+[src/entities/laplacian/project/examples.yaml](<./src/entities/laplacian/project/examples.yaml>)
+
+[src/entities/laplacian/project_type.yaml](<./src/entities/laplacian/project_type.yaml>)
+
+[src/entities/laplacian/project.yml](<./src/entities/laplacian/project.yml>)
+
+[src/entities/laplacian/source_repository.yaml](<./src/entities/laplacian/source_repository.yaml>)
 
 
 
 
-<!-- @main-content -->
+
+<!-- @main-content@ -->

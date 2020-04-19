@@ -105,3 +105,20 @@ entities:
     cardinality: '*'
     aggregate: true
 
+  - name: all_models
+    reference_entity_name: module
+    cardinality: '*'
+    snippet: |
+      (projectType.models + models).distinctBy{ "${it.group}:${it.name}" }
+
+  - name: all_templates
+    reference_entity_name: module
+    cardinality: '*'
+    snippet: |
+      (projectType.templates + templates).distinctBy{ "${it.group}:${it.name}" }
+
+  - name: all_plugins
+    reference_entity_name: module
+    cardinality: '*'
+    snippet: |
+      (projectType.plugins + plugins).distinctBy{ "${it.group}:${it.name}" }

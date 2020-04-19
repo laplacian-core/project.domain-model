@@ -109,3 +109,27 @@ templates
 ### plugins: `List<Module>`
 plugins
 - **Cardinality:** `*`
+
+### all_models: `List<Module>`
+all_models
+- **Cardinality:** `*`
+- **Code:**
+  ```kotlin
+  (projectType.models + models).distinctBy{ "${it.group}:${it.name}" }
+  ```
+
+### all_templates: `List<Module>`
+all_templates
+- **Cardinality:** `*`
+- **Code:**
+  ```kotlin
+  (projectType.templates + templates).distinctBy{ "${it.group}:${it.name}" }
+  ```
+
+### all_plugins: `List<Module>`
+all_plugins
+- **Cardinality:** `*`
+- **Code:**
+  ```kotlin
+  (projectType.plugins + plugins).distinctBy{ "${it.group}:${it.name}" }
+  ```
