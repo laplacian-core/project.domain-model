@@ -11,6 +11,7 @@ project_type
 
 ### name: `String`
 The name of this project_type.
+- **Attributes:** *PK*
 
 ### description: `String`
 The description of this project_type.
@@ -19,7 +20,14 @@ The description of this project_type.
   name
   ```
 
+### base_type_name: `String`
+The base_type_name of this project_type.
+
 ## Relationships
+
+### base_type: `ProjectType?`
+base_type
+- **Cardinality:** `0..1`
 
 ### models: `List<Module>`
 models
@@ -32,3 +40,27 @@ templates
 ### plugins: `List<Module>`
 plugins
 - **Cardinality:** `*`
+
+### all_models: `List<Module>`
+all_models
+- **Cardinality:** `*`
+- **Code:**
+  ```kotlin
+  ((baseType?.allModels ?: emptyList()) + models).distinctBy{ "${it.group}:${it.name}" }
+  ```
+
+### all_templates: `List<Module>`
+all_templates
+- **Cardinality:** `*`
+- **Code:**
+  ```kotlin
+  ((baseType?.allTemplates ?: emptyList()) + templates).distinctBy{ "${it.group}:${it.name}" }
+  ```
+
+### all_plugins: `List<Module>`
+all_plugins
+- **Cardinality:** `*`
+- **Code:**
+  ```kotlin
+  ((baseType?.allPlugins ?: emptyList()) + plugins).distinctBy{ "${it.group}:${it.name}" }
+  ```

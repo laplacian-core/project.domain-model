@@ -7,7 +7,6 @@ A model which expresses the logical structure of laplacian-based projects and mo
 
 <!-- @toc@ -->
 ## Table of contents
-1. [Usage](#usage)
 
 1. [Schema model](#schema-model)
 
@@ -18,18 +17,6 @@ A model which expresses the logical structure of laplacian-based projects and mo
 <!-- @toc@ -->
 
 <!-- @main-content@ -->
-## Usage
-
-Add the following entry to your project definition.
-```yaml
-project:
-  models:
-  - group: laplacian
-    name: project.schema-model
-    version: 1.0.0
-```
-
-
 
 ## Schema model
 
@@ -42,6 +29,26 @@ The following diagram summarizes the structure of the model:
 
 ### Entities
 
+- [**Entity**](<./doc/entities/Entity.md>)
+  エンティティ
+- [**NamedParam**](<./doc/entities/NamedParam.md>)
+  named_param
+- [**NamedValue**](<./doc/entities/NamedValue.md>)
+  named_value
+- [**Property**](<./doc/entities/Property.md>)
+  property
+- [**PropertyMapping**](<./doc/entities/PropertyMapping.md>)
+  property_mapping
+- [**Query**](<./doc/entities/Query.md>)
+  The queries from which all navigation originates.
+- [**Relationship**](<./doc/entities/Relationship.md>)
+  relationship
+- [**ValueDomainType**](<./doc/entities/ValueDomainType.md>)
+  value_domain_type
+- [**ValueDomain**](<./doc/entities/ValueDomain.md>)
+  value_domain
+- [**ValueItem**](<./doc/entities/ValueItem.md>)
+  value_item
 - [**Document**](<./doc/entities/Document.md>)
   document
 - [**Section**](<./doc/entities/Section.md>)

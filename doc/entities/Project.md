@@ -115,7 +115,7 @@ all_models
 - **Cardinality:** `*`
 - **Code:**
   ```kotlin
-  (projectType.models + models).distinctBy{ "${it.group}:${it.name}" }
+  (projectType.allModels + models).distinctBy{ "${it.group}:${it.name}" }
   ```
 
 ### all_templates: `List<Module>`
@@ -123,7 +123,7 @@ all_templates
 - **Cardinality:** `*`
 - **Code:**
   ```kotlin
-  (projectType.templates + templates).distinctBy{ "${it.group}:${it.name}" }
+  (projectType.allTemplates + templates).distinctBy{ "${it.group}:${it.name}" }
   ```
 
 ### all_plugins: `List<Module>`
@@ -131,5 +131,5 @@ all_plugins
 - **Cardinality:** `*`
 - **Code:**
   ```kotlin
-  (projectType.plugins + plugins).distinctBy{ "${it.group}:${it.name}" }
+  (projectType.allPlugins + plugins).distinctBy{ "${it.group}:${it.name}" }
   ```
