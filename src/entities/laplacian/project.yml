@@ -25,6 +25,11 @@ entities:
     default_value: |
       "generator"
 
+  - name: role
+    type: string
+    snippet: |
+      projectType.role
+
   - name: version
     type: string
 

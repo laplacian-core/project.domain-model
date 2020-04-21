@@ -44,6 +44,13 @@ The type of this project.
   "generator"
   ```
 
+### role: `String`
+The role of this project.
+- **Code:**
+  ```kotlin
+  projectType.role
+  ```
+
 ### version: `String`
 The version of this project.
 

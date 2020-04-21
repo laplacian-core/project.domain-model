@@ -13,6 +13,13 @@ project_type
 The name of this project_type.
 - **Attributes:** *PK*
 
+### role: `String`
+The role of this project_type.
+- **Default Value:**
+  ```kotlin
+  baseType?.role ?: "generator"
+  ```
+
 ### description: `String`
 The description of this project_type.
 - **Default Value:**

@@ -7,6 +7,18 @@ entities:
     type: string
     primary_key: true
 
+  - name: role
+    type: string
+    optional: true
+    default_value: |
+      baseType?.role ?: "generator"
+    domain:
+      choices:
+      - value: generator
+      - value: model
+      - value: template
+      - value: plugin
+
   - name: description
     type: string
     optional: true

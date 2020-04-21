@@ -7,6 +7,7 @@ A model which expresses the logical structure of laplacian-based projects and mo
 
 <!-- @toc@ -->
 ## Table of contents
+1. [Usage](#usage)
 
 1. [Schema model](#schema-model)
 
@@ -17,6 +18,18 @@ A model which expresses the logical structure of laplacian-based projects and mo
 <!-- @toc@ -->
 
 <!-- @main-content@ -->
+## Usage
+
+Add the following entry to your project definition.
+```yaml
+project:
+  models:
+  - group: laplacian
+    name: project.schema-model
+    version: 1.0.0
+```
+
+
 
 ## Schema model
 
