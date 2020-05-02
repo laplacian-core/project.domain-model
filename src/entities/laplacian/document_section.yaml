@@ -3,18 +3,21 @@ entities:
   namespace: laplacian.project.document
 
   properties:
-  - name: title
+  - name: name
     type: string
-
-  - name: content
-    type: string
-
-  - name: included_if
-    type: string
-    default_value: |
-      "true"
+    primary_key: true
 
   relationships:
+  - name: title
+    reference_entity_name: multilingual_text
+    cardinality: '1'
+    aggregate: true
+
+  - name: content
+    reference_entity_name: multilingual_text
+    cardinality: '0..1'
+    aggregate: true
+
   - name: sub_sections
     reference_entity_name: section
     cardinality: '*'

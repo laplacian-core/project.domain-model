@@ -1,7 +1,7 @@
 project:
   group: laplacian
   name: project.schema-model
-  type: schema-model
+  type: domain-model
   namespace: laplacian.project
   version: '1.0.0'
   description: |

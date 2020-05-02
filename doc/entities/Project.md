@@ -44,6 +44,19 @@ The type of this project.
   "generator"
   ```
 
+### author: `String`
+The author of this project.
+
+### licensor: `String`
+The licensor of this project.
+- **Default Value:**
+  ```kotlin
+  author
+  ```
+
+### license: `String`
+The license of this project.
+
 ### role: `String`
 The role of this project.
 - **Code:**
@@ -81,6 +94,34 @@ The base_dir of this project.
 - **Default Value:**
   ```kotlin
   "subprojects/${group}.${name}"
+  ```
+
+### is_model: `Boolean`
+Defines this project is is_model or not.
+- **Code:**
+  ```kotlin
+  role == "model"
+  ```
+
+### is_template: `Boolean`
+Defines this project is is_template or not.
+- **Code:**
+  ```kotlin
+  role == "template"
+  ```
+
+### is_plugin: `Boolean`
+Defines this project is is_plugin or not.
+- **Code:**
+  ```kotlin
+  role == "plugin"
+  ```
+
+### is_domain_model: `Boolean`
+Defines this project is is_domain_model or not.
+- **Code:**
+  ```kotlin
+  type == "domain-model"
   ```
 
 ## Relationships

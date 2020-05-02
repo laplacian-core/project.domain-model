@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -e
-SCRIPT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}" && pwd)
-PROJECT_BASE_DIR=$(cd $SCRIPT_BASE_DIR && cd .. && pwd)
+PROJECT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}/../" && pwd)
 
-GRADLE_DIR=${SCRIPT_BASE_DIR}/build/laplacian
+SCRIPT_BASE_DIR="$PROJECT_BASE_DIR/scripts"
+GRADLE_DIR=${SCRIPT_BASE_DIR}/laplacian
 GRADLE_BUILD_FILE="$GRADLE_DIR/build.gradle"
 GRADLE_SETTINGS_FILE="$GRADLE_DIR/settings.gradle"
 
@@ -19,7 +19,7 @@ DEST_DIR="$PROJECT_BASE_DIR/dest"
 main() {
   generate
   publish
-
+  clean
 }
 
 ## @generate-function@ ##
@@ -30,9 +30,14 @@ generate() {
 
 ## @publish-function@ ##
 publish() {
+  create_build_dir
   create_settings_gradle
   create_build_gradle
   run_gradle
+}
+
+create_build_dir() {
+  mkdir -p $GRADLE_DIR
 }
 
 run_gradle() {
@@ -103,5 +108,9 @@ publishing {
 EOF
 }
 ## @publish-function@ ##
+
+clean() {
+  rm -f $GRADLE_BUILD_FILE $GRADLE_SETTINGS_FILE 2> /dev/null || true
+}
 
 main

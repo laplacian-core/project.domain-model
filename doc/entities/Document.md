@@ -22,13 +22,6 @@ The author of this document.
 ### rights: `String`
 The rights of this document.
 
-### language: `String`
-The language of this document.
-- **Default Value:**
-  ```kotlin
-  "en-US"
-  ```
-
 ### abstract: `String`
 The abstract of this document.
 - **Default Value:**

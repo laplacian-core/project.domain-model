@@ -17,12 +17,6 @@ entities:
     type: string
     optional: true
 
-  - name: language
-    type: string
-    optional: true
-    default_value: |
-      "en-US"
-
   - name: abstract
     type: string
     optional: true
@@ -39,4 +33,3 @@ entities:
     reference_entity_name: section
     cardinality: '*'
     aggregate: true
-

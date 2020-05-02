@@ -9,20 +9,19 @@ section
 
 ## Properties
 
-### title: `String`
-The title of this section.
-
-### content: `String`
-The content of this section.
-
-### included_if: `String`
-The included_if of this section.
-- **Default Value:**
-  ```kotlin
-  "true"
-  ```
+### name: `String`
+The name of this section.
+- **Attributes:** *PK*
 
 ## Relationships
+
+### title: `MultilingualText`
+title
+- **Cardinality:** `1`
+
+### content: `MultilingualText?`
+content
+- **Cardinality:** `0..1`
 
 ### sub_sections: `List<Section>`
 sub_sections
