@@ -161,7 +161,7 @@ generate() {
     --model 'laplacian:laplacian.metamodel:1.0.0' \
     --model 'laplacian:laplacian.common-model:1.0.0' \
     --model-files $(normalize_path 'model/') \
-    --model-files $(normalize_path 'src/') \
+    --model-files $(normalize_path 'dest/') \
     --template-files $(normalize_path 'template/') \
     --target-dir "$NEXT_CONTENT_DIR_NAME" \
     --local-repo "$LOCAL_REPO_PATH"

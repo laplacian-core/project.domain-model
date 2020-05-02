@@ -8,6 +8,13 @@ project:
     A model which expresses the logical structure of laplacian-based projects and modules.
   source_repository:
     url: https://github.com/nabla-squared/laplacian.project.schema-model.git
-    branch: master
+  plugins:
+  - group: laplacian
+    name: common-model-plugin
+    version: '1.0.0'
+  models:
+  - group: laplacian
+    name: common-model
+    version: '1.0.0'
   model_files:
-  - src/
+  - dest/
