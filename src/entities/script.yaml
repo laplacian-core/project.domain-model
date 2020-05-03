@@ -1,0 +1,19 @@
+entities:
+- name: script
+  namespace: laplacian.project
+
+  properties:
+  - name: name
+    type: string
+    primary_key: true
+
+  relationships:
+  - name: description
+    reference_entity_name: multilingual_text
+    cardinality: '0..1'
+    aggregate: true
+
+  - name: options
+    reference_entity_name: script_option
+    cardinality: '*'
+    aggregate: true

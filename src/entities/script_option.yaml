@@ -1,0 +1,42 @@
+entities:
+- name: script_option
+  namespace: laplacian.project
+
+  properties:
+  - name: name
+    type: string
+    primary_key: true
+
+  - name: is_flag
+    type: boolean
+    optional: true
+    default_value: |
+      false
+
+  - name: default_value
+    type: string
+    optional: true
+
+  - name: is_multiple
+    type: boolean
+    optional: true
+    default_value: |
+      false
+
+  - name: is_required
+    type: boolean
+    optional: true
+    default_value: |
+      false
+
+  - name: shot_name
+    type: string
+    domain:
+      pattern: |
+        [0-9a-zA-Z]
+
+  relationships:
+  - name: description
+    reference_entity_name: multilingual_text
+    cardinality: '0..1'
+    aggregate: true

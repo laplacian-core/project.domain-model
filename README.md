@@ -1,7 +1,7 @@
 <!-- @head-content@ -->
 # laplacian/project.schema-model
 
-A model which expresses the logical structure of laplacian-based projects and modules.
+This model represents the logical structure of a *Laplacian*-based project.
 
 
 *Read this in other languages*: [[日本語](README_ja.md)] [[简体中文](README_zh.md)]
@@ -39,6 +39,10 @@ module
 project
 - [**ProjectType**](<./doc/entities/ProjectType.md>)
 project_type
+- [**Script**](<./doc/entities/Script.md>)
+script
+- [**ScriptOption**](<./doc/entities/ScriptOption.md>)
+script_option
 - [**SourceRepository**](<./doc/entities/SourceRepository.md>)
 source_repository
 
@@ -78,13 +82,15 @@ $ ./script/generate --dry-run
 
 
 - [model/project.yaml](<./model/project.yaml>)
-- [src/entities/laplacian/document_section.yaml](<./src/entities/laplacian/document_section.yaml>)
-- [src/entities/laplacian/document.yaml](<./src/entities/laplacian/document.yaml>)
-- [src/entities/laplacian/module.yaml](<./src/entities/laplacian/module.yaml>)
-- [src/entities/laplacian/project/examples.yaml](<./src/entities/laplacian/project/examples.yaml>)
-- [src/entities/laplacian/project_type.yaml](<./src/entities/laplacian/project_type.yaml>)
-- [src/entities/laplacian/project.yml](<./src/entities/laplacian/project.yml>)
-- [src/entities/laplacian/source_repository.yaml](<./src/entities/laplacian/source_repository.yaml>)
+- [src/entities/document_section.yaml](<./src/entities/document_section.yaml>)
+- [src/entities/document.yaml](<./src/entities/document.yaml>)
+- [src/entities/module.yaml](<./src/entities/module.yaml>)
+- [src/entities/project/examples.yaml](<./src/entities/project/examples.yaml>)
+- [src/entities/project_type.yaml](<./src/entities/project_type.yaml>)
+- [src/entities/project.yml](<./src/entities/project.yml>)
+- [src/entities/script_option.yaml](<./src/entities/script_option.yaml>)
+- [src/entities/script.yaml](<./src/entities/script.yaml>)
+- [src/entities/source_repository.yaml](<./src/entities/source_repository.yaml>)
 
 
 <!-- @main-content@ -->
