@@ -143,6 +143,10 @@ source_repository
 document
 - **Cardinality:** `0..1`
 
+### scripts: `List<Script>`
+scripts
+- **Cardinality:** `*`
+
 ### models: `List<Module>`
 models
 - **Cardinality:** `*`

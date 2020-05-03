@@ -126,6 +126,11 @@ entities:
     cardinality: '0..1'
     aggregate: true
 
+  - name: scripts
+    reference_entity_name: script
+    cardinality: '*'
+    aggregate: true
+
   - name: models
     reference_entity_name: module
     cardinality: '*'
