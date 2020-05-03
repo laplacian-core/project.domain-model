@@ -9,6 +9,7 @@ A model which expresses the logical structure of laplacian-based projects and mo
 
 <!-- @toc@ -->
 ## Table of contents
+1. [概要](#概要)
 1. [使用方法](#使用方法)
 1. [インデックス](#インデックス)
 
@@ -16,12 +17,36 @@ A model which expresses the logical structure of laplacian-based projects and mo
 <!-- @toc@ -->
 
 <!-- @main-content@ -->
+## 概要
+
+
+### モデル概要
+
+
+以下の図は、このモジュールに含まれる各エンティティの内容とそれらの間の関係を表しています。
+![](./doc/image/model-diagram.svg)
+### エンティティ一覧
+
+
+- [**Document**](<./doc/entities/Document.md>)
+document
+- [**Section**](<./doc/entities/Section.md>)
+section
+- [**Module**](<./doc/entities/Module.md>)
+module
+- [**Project**](<./doc/entities/Project.md>)
+project
+- [**ProjectType**](<./doc/entities/ProjectType.md>)
+project_type
+- [**SourceRepository**](<./doc/entities/SourceRepository.md>)
+source_repository
+
 ## 使用方法
 
-この domain-modelモジュールを適用するには、プロジェクト定義に以下のエントリを追加してください。
+この modelモジュールを適用するには、プロジェクト定義に以下のエントリを追加してください。
 ```yaml
 project:
-  domain-models:
+  models:
   - group: laplacian
     name: project.schema-model
     version: 1.0.0

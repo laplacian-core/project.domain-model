@@ -9,6 +9,7 @@ A model which expresses the logical structure of laplacian-based projects and mo
 
 <!-- @toc@ -->
 ## Table of contents
+1. [概述](#概述)
 1. [如何使用](#如何使用)
 1. [索引](#索引)
 
@@ -16,13 +17,37 @@ A model which expresses the logical structure of laplacian-based projects and mo
 <!-- @toc@ -->
 
 <!-- @main-content@ -->
+## 概述
+
+
+### 模式概述
+
+
+下面的图表显示了本模块所包含的每个实体的内容以及它们之间的关系。
+![](./doc/image/model-diagram.svg)
+### 实体清单
+
+
+- [**Document**](<./doc/entities/Document.md>)
+document
+- [**Section**](<./doc/entities/Section.md>)
+section
+- [**Module**](<./doc/entities/Module.md>)
+module
+- [**Project**](<./doc/entities/Project.md>)
+project
+- [**ProjectType**](<./doc/entities/ProjectType.md>)
+project_type
+- [**SourceRepository**](<./doc/entities/SourceRepository.md>)
+source_repository
+
 ## 如何使用
 
-要应用此domain-model模块，请在项目定义中加入以下条目
+要应用此model模块，请在项目定义中加入以下条目
 
 ```yaml
 project:
-  domain-models:
+  models:
   - group: laplacian
     name: project.schema-model
     version: 1.0.0

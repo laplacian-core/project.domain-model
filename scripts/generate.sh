@@ -156,7 +156,7 @@ generate() {
     --plugin 'laplacian:laplacian.common-model-plugin:1.0.0' \
     --template 'laplacian:laplacian.project.base-template:1.0.0' \
     --template 'laplacian:laplacian.project.document-template:1.0.0' \
-    --template 'laplacian:laplacian.schema.document-template:1.0.0' \
+    --template 'laplacian:laplacian.domain-model.document-template:1.0.0' \
     --model 'laplacian:laplacian.project.project-types:1.0.0' \
     --model 'laplacian:laplacian.metamodel:1.0.0' \
     --model 'laplacian:laplacian.common-model:1.0.0' \

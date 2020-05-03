@@ -55,12 +55,6 @@ entities:
     example_values:
     - "laplacian.model.metamodel"
 
-  - name: description
-    type: string
-    optional: true
-    default_value: |
-      "${group}:${name}"
-
   - name: model_files
     type: string
     multiple: true
@@ -100,6 +94,11 @@ entities:
       type == "domain-model"
 
   relationships:
+  - name: description
+    reference_entity_name: multilingual_text
+    cardinality: '0..1'
+    aggregate: true
+
   - name: project_type
     reference_entity_name: project_type
     cardinality: '1'

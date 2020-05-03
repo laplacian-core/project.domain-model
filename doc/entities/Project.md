@@ -76,13 +76,6 @@ The namespace of this project.
       .joinToString(".")
   ```
 
-### description: `String`
-The description of this project.
-- **Default Value:**
-  ```kotlin
-  "${group}:${name}"
-  ```
-
 ### model_files: `List<String>`
 The model_files of this project.
 
@@ -125,6 +118,10 @@ Defines this project is is_domain_model or not.
   ```
 
 ## Relationships
+
+### description: `MultilingualText?`
+description
+- **Cardinality:** `0..1`
 
 ### project_type: `ProjectType`
 project_type
