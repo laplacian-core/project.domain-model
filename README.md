@@ -17,7 +17,7 @@ This model represents the logical structure of a *Laplacian*-based project.
 
 - [Index](#index)
 
-  * [The list of entities](#the-list-of-entities)
+  * [Entity list](#entity-list)
 
   * [Script List](#script-list)
 
@@ -70,13 +70,25 @@ $ ./script/generate --dry-run
 ## Index
 
 
-### The list of entities
+### Entity list
 
 
-{{#each entities.in_namespace as |entity| ~}}
-- [**{{entity.class_name}}**](<./doc/entities/{{entity.class_name}}.md>)
-{{shift entity.description 4}}
-{{/each}}
+- [**Document**](<./doc/entities/Document.md>)
+document
+- [**Section**](<./doc/entities/Section.md>)
+section
+- [**Module**](<./doc/entities/Module.md>)
+module
+- [**Project**](<./doc/entities/Project.md>)
+project
+- [**ProjectType**](<./doc/entities/ProjectType.md>)
+project_type
+- [**Script**](<./doc/entities/Script.md>)
+script
+- [**Option**](<./doc/entities/Option.md>)
+option
+- [**SourceRepository**](<./doc/entities/SourceRepository.md>)
+source_repository
 ### Script List
 
 
