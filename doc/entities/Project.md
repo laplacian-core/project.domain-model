@@ -117,6 +117,13 @@ Defines this project is is_domain_model or not.
   type == "domain-model"
   ```
 
+### is_domain_model_plugin: `Boolean`
+Defines this project is is_domain_model_plugin or not.
+- **Code:**
+  ```kotlin
+  type == "domain-model-plugin"
+  ```
+
 ## Relationships
 
 ### description: `MultilingualText?`

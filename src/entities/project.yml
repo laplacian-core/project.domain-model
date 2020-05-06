@@ -93,6 +93,13 @@ entities:
     snippet: |
       type == "domain-model"
 
+  - name: is_domain_model_plugin
+    type: boolean
+    snippet: |
+      type == "domain-model-plugin"
+
+
+
   relationships:
   - name: description
     reference_entity_name: multilingual_text
