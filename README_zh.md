@@ -13,11 +13,11 @@
 
   * [模式概述](#模式概述)
 
-  * [实体清单](#实体清单)
-
 - [如何使用](#如何使用)
 
 - [索引](#索引)
+
+  * [实体清单](#实体清单)
 
   * [命令列表](#命令列表)
 
@@ -36,25 +36,6 @@
 
 下面的图表显示了本模块所包含的每个实体的内容以及它们之间的关系。
 ![](./doc/image/model-diagram.svg)
-### 实体清单
-
-
-- [**Document**](<./doc/entities/Document.md>)
-document
-- [**Section**](<./doc/entities/Section.md>)
-section
-- [**Module**](<./doc/entities/Module.md>)
-module
-- [**Project**](<./doc/entities/Project.md>)
-project
-- [**ProjectType**](<./doc/entities/ProjectType.md>)
-project_type
-- [**Script**](<./doc/entities/Script.md>)
-script
-- [**Option**](<./doc/entities/Option.md>)
-option
-- [**SourceRepository**](<./doc/entities/SourceRepository.md>)
-source_repository
 
 ## 如何使用
 
@@ -91,6 +72,13 @@ $ ./script/generate --dry-run
 ## 索引
 
 
+### 实体清单
+
+
+{{#each entities.in_namespace as |entity| ~}}
+- [**{{entity.class_name}}**](<./doc/entities/{{entity.class_name}}.md>)
+{{shift entity.description 4}}
+{{/each}}
 ### 命令列表
 
 

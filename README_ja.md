@@ -13,11 +13,11 @@
 
   * [モデル概要](#モデル概要)
 
-  * [エンティティ一覧](#エンティティ一覧)
-
 - [使用方法](#使用方法)
 
 - [インデックス](#インデックス)
+
+  * [エンティティ一覧](#エンティティ一覧)
 
   * [スクリプト一覧](#スクリプト一覧)
 
@@ -36,25 +36,6 @@
 
 以下の図は、このモジュールに含まれる各エンティティの内容とそれらの間の関係を表しています。
 ![](./doc/image/model-diagram.svg)
-### エンティティ一覧
-
-
-- [**Document**](<./doc/entities/Document.md>)
-document
-- [**Section**](<./doc/entities/Section.md>)
-section
-- [**Module**](<./doc/entities/Module.md>)
-module
-- [**Project**](<./doc/entities/Project.md>)
-project
-- [**ProjectType**](<./doc/entities/ProjectType.md>)
-project_type
-- [**Script**](<./doc/entities/Script.md>)
-script
-- [**Option**](<./doc/entities/Option.md>)
-option
-- [**SourceRepository**](<./doc/entities/SourceRepository.md>)
-source_repository
 
 ## 使用方法
 
@@ -90,6 +71,13 @@ $ ./script/generate --dry-run
 ## インデックス
 
 
+### エンティティ一覧
+
+
+{{#each entities.in_namespace as |entity| ~}}
+- [**{{entity.class_name}}**](<./doc/entities/{{entity.class_name}}.md>)
+{{shift entity.description 4}}
+{{/each}}
 ### スクリプト一覧
 
 
