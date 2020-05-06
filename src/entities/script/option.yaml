@@ -1,6 +1,6 @@
 entities:
-- name: script_option
-  namespace: laplacian.project
+- name: option
+  namespace: laplacian.project.script
 
   properties:
   - name: name
@@ -29,8 +29,9 @@ entities:
     default_value: |
       false
 
-  - name: shot_name
+  - name: short_name
     type: string
+    optional: true
     domain:
       pattern: |
         [0-9a-zA-Z]

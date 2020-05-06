@@ -40,8 +40,8 @@ project
 project_type
 - [**Script**](<./doc/entities/Script.md>)
 script
-- [**ScriptOption**](<./doc/entities/ScriptOption.md>)
-script_option
+- [**Option**](<./doc/entities/Option.md>)
+option
 - [**SourceRepository**](<./doc/entities/SourceRepository.md>)
 source_repository
 
@@ -84,13 +84,13 @@ $ ./script/generate --dry-run
 
 
 - [model/project.yaml](<./model/project.yaml>)
-- [src/entities/document_section.yaml](<./src/entities/document_section.yaml>)
+- [src/entities/document/section.yaml](<./src/entities/document/section.yaml>)
 - [src/entities/document.yaml](<./src/entities/document.yaml>)
 - [src/entities/module.yaml](<./src/entities/module.yaml>)
 - [src/entities/project/examples.yaml](<./src/entities/project/examples.yaml>)
 - [src/entities/project_type.yaml](<./src/entities/project_type.yaml>)
 - [src/entities/project.yml](<./src/entities/project.yml>)
-- [src/entities/script_option.yaml](<./src/entities/script_option.yaml>)
+- [src/entities/script/option.yaml](<./src/entities/script/option.yaml>)
 - [src/entities/script.yaml](<./src/entities/script.yaml>)
 - [src/entities/source_repository.yaml](<./src/entities/source_repository.yaml>)
 

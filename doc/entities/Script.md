@@ -19,6 +19,6 @@ The name of this script.
 description
 - **Cardinality:** `0..1`
 
-### options: `List<ScriptOption>`
+### options: `List<Option>`
 options
 - **Cardinality:** `*`

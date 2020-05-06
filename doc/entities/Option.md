@@ -1,7 +1,7 @@
-# **ScriptOption**
-**namespace:** laplacian.project
+# **Option**
+**namespace:** laplacian.project.script
 
-script_option
+option
 
 
 
@@ -10,35 +10,35 @@ script_option
 ## Properties
 
 ### name: `String`
-The name of this script_option.
+The name of this option.
 - **Attributes:** *PK*
 
 ### is_flag: `Boolean`
-Defines this script_option is is_flag or not.
+Defines this option is is_flag or not.
 - **Default Value:**
   ```kotlin
   false
   ```
 
 ### default_value: `String`
-The default_value of this script_option.
+The default_value of this option.
 
 ### is_multiple: `Boolean`
-Defines this script_option is is_multiple or not.
+Defines this option is is_multiple or not.
 - **Default Value:**
   ```kotlin
   false
   ```
 
 ### is_required: `Boolean`
-Defines this script_option is is_required or not.
+Defines this option is is_required or not.
 - **Default Value:**
   ```kotlin
   false
   ```
 
-### shot_name: `String`
-The shot_name of this script_option.
+### short_name: `String`
+The short_name of this option.
 
 ## Relationships
 
