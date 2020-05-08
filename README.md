@@ -1,5 +1,5 @@
 <!-- @head-content@ -->
-# laplacian/project.schema-model
+# laplacian/project.domain-model
 
 This model represents the logical structure of a *Laplacian*-based project.
 
@@ -45,7 +45,7 @@ To apply this Model module, add the following entry to your project definition.
 project:
   models:
   - group: laplacian
-    name: project.schema-model
+    name: project.domain-model
     version: 1.0.0
 ```
 
@@ -62,7 +62,7 @@ diff --color -r PROJECT_HOME/.NEXT/somewhere/something.md PROJECT_HOME/somewhere
 
 If there is no problem, execute the following command to reflect the change.
 ```console
-$ ./script/generate --dry-run
+$ ./script/generate
 
 ```
 
@@ -114,7 +114,7 @@ source_repository
       Each of these directories contains the template files of the resource to be output
       in the directory `dest/` `doc/` `scripts`.
 
-    - `template/model` template/template`
+    - `template/model` `template/template`
       These directories store template files updating the contents of `template/` and `model/` used for the generation.
       If the content of `template/` `model/` is updated as a result of the generation,
       the generation process is executed recursively.
@@ -184,6 +184,8 @@ source_repository
 ### Source code list
 
 
+- [model/project/scripts/generate.yaml](<./model/project/scripts/generate.yaml>)
+- [model/project/scripts/publish-local.yaml](<./model/project/scripts/publish-local.yaml>)
 - [model/project.yaml](<./model/project.yaml>)
 - [src/entities/document/section.yaml](<./src/entities/document/section.yaml>)
 - [src/entities/document.yaml](<./src/entities/document.yaml>)

@@ -1,5 +1,5 @@
 <!-- @head-content@ -->
-# laplacian/project.schema-model
+# laplacian/project.domain-model
 
 このモデルは*Laplacian*プロジェクトの論理構造を表します。
 
@@ -44,7 +44,7 @@
 project:
   models:
   - group: laplacian
-    name: project.schema-model
+    name: project.domain-model
     version: 1.0.0
 ```
 
@@ -63,7 +63,7 @@ diff --color -r PROJECT_HOME/.NEXT/somewhere/something.md PROJECT_HOME/somewhere
 内容に問題が無ければ、下記コマンドを実行して変更を反映してください。
 
 ```console
-$ ./script/generate --dry-run
+$ ./script/generate
 
 ```
 
@@ -114,11 +114,11 @@ source_repository
     - `template/dest` `template/doc` `template/scripts`
       これらのディレクトリはそれぞれ、`dest/` `doc/` `scripts`の各ディレクトリに出力される資源のテンプレートを格納します。
 
-    - `template/model` template/template`
+    - `template/model` `template/template`
       自動生成で使用される`template/` `model/`の内容を更新するためのテンプレートを格納します。
       自動生成の結果、`template/` `model/` の内容が更新された場合は、自動生成処理を再帰的に実行します。
       なお、上記処理中に発生した`template/` `model/`への変更は、中間状態として扱われるため、処理完了後は失われます。
-      これらの中間ファイルを確認するためには*--dry-run*オプションを使用してください。
+      これらの中間ファイルを確認するためには *--dry-run* オプションを使用してください。
 
   *自動生成結果ファイル*
 
@@ -178,6 +178,8 @@ source_repository
 ### ソースコード一覧
 
 
+- [model/project/scripts/generate.yaml](<./model/project/scripts/generate.yaml>)
+- [model/project/scripts/publish-local.yaml](<./model/project/scripts/publish-local.yaml>)
 - [model/project.yaml](<./model/project.yaml>)
 - [src/entities/document/section.yaml](<./src/entities/document/section.yaml>)
 - [src/entities/document.yaml](<./src/entities/document.yaml>)
