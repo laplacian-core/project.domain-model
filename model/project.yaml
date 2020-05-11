@@ -14,6 +14,13 @@ project:
   source_repository:
     url: https://github.com/nabla-squared/laplacian.project.domain-model.git
     branch: master
+  module_repositories:
+    local:
+      path: ../../../mvn-repo
+      url: https://github.com/nabla-squared/mvn-repo
+      branch: master
+    remote:
+    - https://github.com/nabla-squared/mvn-repo
   plugins:
   - group: laplacian
     name: common-model-plugin
@@ -23,4 +30,4 @@ project:
     name: common-model
     version: '1.0.0'
   model_files:
-  - dest/
+  - 'dest/'

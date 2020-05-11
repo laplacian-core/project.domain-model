@@ -1,13 +1,13 @@
 _description: &description
   en: |
     After the resources in the project are generated,
-    the resources in the `./dest` directory are built as a model module
+    the resources in the `./dest` directory are built as a plugin module
     and registered in the local repository.
   ja: |
-    プロジェクト内の資源を自動生成した後、ディレクトリにある資源をモデルモジュールとしてビルドし、
+    プロジェクト内の資源を自動生成した後、ディレクトリにある資源をプラグインモジュールとしてビルドし、
     ローカルリポジトリに登録します。
   zh: |
-    项目中的资源生成后，在`./dest`目录下的资源作为模型模块建立，并在本地资源库中注册。
+    项目中的资源生成后，在`./dest`目录下的资源作为一个插件模块建立，并在本地资源库中注册。
 
 _options: &options
 - name: help

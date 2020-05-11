@@ -1,7 +1,7 @@
 <!-- @head-content@ -->
-# laplacian/project.domain-model
+# laplacian/project.domain-model-plugin
 
-このモデルは*Laplacian*プロジェクトの論理構造を表します。
+project.domain-model のドメインモデルプラグインモジュール
 
 
 *Read this in other languages*: [[English](README.md)] [[简体中文](README_zh.md)]
@@ -9,15 +9,7 @@
 
 <!-- @toc@ -->
 ## Table of contents
-- [概要](#概要)
-
-  * [モデル概要](#モデル概要)
-
-- [使用方法](#使用方法)
-
 - [インデックス](#インデックス)
-
-  * [エンティティ一覧](#エンティティ一覧)
 
   * [スクリプト一覧](#スクリプト一覧)
 
@@ -28,68 +20,9 @@
 <!-- @toc@ -->
 
 <!-- @main-content@ -->
-## 概要
-
-
-### モデル概要
-
-
-以下の図は、このモジュールに含まれる各エンティティの内容とそれらの間の関係を表しています。
-![](./doc/image/model-diagram.svg)
-
-## 使用方法
-
-この modelモジュールを適用するには、プロジェクト定義に以下のエントリを追加してください。
-```yaml
-project:
-  models:
-  - group: laplacian
-    name: project.domain-model
-    version: 1.0.0
-```
-
-下記のコマンドを実行すると、このモジュールの適用によって影響を受ける資源の一覧とその内容を確認できます。
-
-```console
-$ ./script/generate --dry-run
-
-diff --color -r PROJECT_HOME/.NEXT/somewhere/something.md PROJECT_HOME/somewhere/something.md
-1,26c1,10
-< content: OLD CONTENT
----
-> content: NEW CONTENT
-```
-
-内容に問題が無ければ、下記コマンドを実行して変更を反映してください。
-
-```console
-$ ./script/generate
-
-```
-
-
 ## インデックス
 
 
-### エンティティ一覧
-
-
-- [**Document**](<./doc/entities/Document.md>)
-document
-- [**Section**](<./doc/entities/Section.md>)
-section
-- [**Module**](<./doc/entities/Module.md>)
-module
-- [**Project**](<./doc/entities/Project.md>)
-project
-- [**ProjectType**](<./doc/entities/ProjectType.md>)
-project_type
-- [**Script**](<./doc/entities/Script.md>)
-script
-- [**Option**](<./doc/entities/Option.md>)
-option
-- [**SourceRepository**](<./doc/entities/SourceRepository.md>)
-source_repository
 ### スクリプト一覧
 
 
@@ -154,7 +87,7 @@ source_repository
   >    (Default: 10)
 - [./script/publish-local.sh](<./scripts/publish-local.sh>)
 
-  プロジェクト内の資源を自動生成した後、ディレクトリにある資源をモデルモジュールとしてビルドし、
+  プロジェクト内の資源を自動生成した後、ディレクトリにある資源をプラグインモジュールとしてビルドし、
   ローカルリポジトリに登録します。
 
   > Usage: publish-local.sh [OPTION]...
@@ -178,16 +111,12 @@ source_repository
 ### ソースコード一覧
 
 
+- [model/project/document/document.yaml](<./model/project/document/document.yaml>)
+- [model/project/document/sections/index/script-list.yaml](<./model/project/document/sections/index/script-list.yaml>)
+- [model/project/document/sections.yaml](<./model/project/document/sections.yaml>)
+- [model/project/scripts/generate.yaml](<./model/project/scripts/generate.yaml>)
+- [model/project/scripts/publish-local.yaml](<./model/project/scripts/publish-local.yaml>)
 - [model/project.yaml](<./model/project.yaml>)
-- [src/entities/document/section.yaml](<./src/entities/document/section.yaml>)
-- [src/entities/document.yaml](<./src/entities/document.yaml>)
-- [src/entities/module.yaml](<./src/entities/module.yaml>)
-- [src/entities/project/examples.yaml](<./src/entities/project/examples.yaml>)
-- [src/entities/project_type.yaml](<./src/entities/project_type.yaml>)
-- [src/entities/project.yml](<./src/entities/project.yml>)
-- [src/entities/script/option.yaml](<./src/entities/script/option.yaml>)
-- [src/entities/script.yaml](<./src/entities/script.yaml>)
-- [src/entities/source_repository.yaml](<./src/entities/source_repository.yaml>)
 
 
 <!-- @main-content@ -->
