@@ -94,6 +94,51 @@ source_repository
 ### 命令列表
 
 
+- [./script/do-each-subproject.sh](<./scripts/do-each-subproject.sh>)
+
+  为每个子项目执行参数指定的命令。
+
+  例子:
+  ```console
+  $ ./scripts/null -c git status
+  ```
+
+  > Usage: do-each-subproject.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
+  > -c, --continue-on-error
+  >
+  >   即使给定的命令在中间的一个子项目中失败，对其余的子项目执行该命令。
+  >   
+- [./script/generate-laplacian-project-domain-model-plugin.sh](<./scripts/generate-laplacian-project-domain-model-plugin.sh>)
+
+  在下面的目录中生成[laplacian/project.domain-model-plugin](<null>)项目，作为子项目。
+  ```
+  subprojects/laplacian.project.domain-model-plugin
+  ```
+  如果子项目已经存在，则更新子项目的内容。
+
+  > Usage: generate-laplacian-project-domain-model-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
+  > -c, --clean
+  >
+  >   删除子项目的所有本地资源，并对其进行再生。
+  >   
 - [./script/generate.sh](<./scripts/generate.sh>)
 
   生成本项目中每个`src/` `model/` `template/`目录下的资源。
@@ -174,6 +219,20 @@ source_repository
   > , --skip-generation
   >
   >   这个选项与[generate.sh](<./scripts/generate.sh>)中的同名选项相同。
+  >   
+- [./script/publish-local-laplacian-project-domain-model-plugin.generate.sh](<./scripts/publish-local-laplacian-project-domain-model-plugin-generate.sh>)
+
+  为[laplacian/project.domain-model-plugin](<null>)子项目生成资源。
+
+  > Usage: publish-local-laplacian-project-domain-model-plugin-generate.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
   >   
 ### 源码列表
 

@@ -93,6 +93,51 @@ source_repository
 ### スクリプト一覧
 
 
+- [./script/do-each-subproject.sh](<./scripts/do-each-subproject.sh>)
+
+  各サブプロジェクトに対して、引数で指定されたコマンドを一括で実行します。
+
+  使用例:
+  ```console
+  $ ./scripts/null -c git status
+  ```
+
+  > Usage: do-each-subproject.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   このコマンドの使用方法を表示します。
+  >   
+  > -v, --verbose
+  >
+  >   より詳細なコマンドの実行情報を表示します。
+  >   
+  > -c, --continue-on-error
+  >
+  >   途中のサブプロジェクトで与えられたコマンドが失敗しても、残りのサブプロジェクトに対してコマンドを実行します。
+  >   
+- [./script/generate-laplacian-project-domain-model-plugin.sh](<./scripts/generate-laplacian-project-domain-model-plugin.sh>)
+
+  [laplacian/project.domain-model-plugin](<null>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
+  ```
+  subprojects/laplacian.project.domain-model-plugin
+  ```
+  すでにそのサブプロジェクトが存在する場合はその内容を更新します。
+
+  > Usage: generate-laplacian-project-domain-model-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   このコマンドの使用方法を表示します。
+  >   
+  > -v, --verbose
+  >
+  >   より詳細なコマンドの実行情報を表示します。
+  >   
+  > -c, --clean
+  >
+  >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
+  >   
 - [./script/generate.sh](<./scripts/generate.sh>)
 
   このプロジェクト内の資源を自動生成します。
@@ -174,6 +219,20 @@ source_repository
   > , --skip-generation
   >
   >   自動生成処理を行わずに、ビルドおよびローカルリポジトリへの登録を行います。
+  >   
+- [./script/publish-local-laplacian-project-domain-model-plugin.generate.sh](<./scripts/publish-local-laplacian-project-domain-model-plugin-generate.sh>)
+
+  [laplacian/project.domain-model-plugin](<null>)サブプロジェクトの資源を自動生成します。
+
+  > Usage: publish-local-laplacian-project-domain-model-plugin-generate.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   このコマンドの使用方法を表示します。
+  >   
+  > -v, --verbose
+  >
+  >   より詳細なコマンドの実行情報を表示します。
   >   
 ### ソースコード一覧
 

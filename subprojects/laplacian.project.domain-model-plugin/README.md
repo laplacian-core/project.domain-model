@@ -118,11 +118,6 @@ A domain model plugin module for the project.domain-model.
 ### Source code list
 
 
-- [model/project/document/document.yaml](<./model/project/document/document.yaml>)
-- [model/project/document/sections/index/script-list.yaml](<./model/project/document/sections/index/script-list.yaml>)
-- [model/project/document/sections.yaml](<./model/project/document/sections.yaml>)
-- [model/project/scripts/generate.yaml](<./model/project/scripts/generate.yaml>)
-- [model/project/scripts/publish-local.yaml](<./model/project/scripts/publish-local.yaml>)
 - [model/project.yaml](<./model/project.yaml>)
 
 

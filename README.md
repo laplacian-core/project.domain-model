@@ -92,6 +92,51 @@ source_repository
 ### Script List
 
 
+- [./script/do-each-subproject.sh](<./scripts/do-each-subproject.sh>)
+
+  Executes the command specified by the argument for each subproject.
+
+  Example:
+  ```console
+  $ ./scripts/null -c git status
+  ```
+
+  > Usage: do-each-subproject.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --continue-on-error
+  >
+  >   Even if the given command fails in a subproject in the middle, executes it for the remaining subprojects.
+  >   
+- [./script/generate-laplacian-project-domain-model-plugin.sh](<./scripts/generate-laplacian-project-domain-model-plugin.sh>)
+
+  Generates the [laplacian/project.domain-model-plugin](<null>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian.project.domain-model-plugin
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-project-domain-model-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
 - [./script/generate.sh](<./scripts/generate.sh>)
 
   Generates The resources in each directory of `src/` `model/` `template/` in this project.
@@ -180,6 +225,20 @@ source_repository
   > , --skip-generation
   >
   >   This option is the same as the option of the same name in [generate.sh](<./scripts/generate.sh>).
+  >   
+- [./script/publish-local-laplacian-project-domain-model-plugin.generate.sh](<./scripts/publish-local-laplacian-project-domain-model-plugin-generate.sh>)
+
+  Generates resources for the [laplacian/project.domain-model-plugin](<null>) subproject.
+
+  > Usage: publish-local-laplacian-project-domain-model-plugin-generate.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
   >   
 ### Source code list
 
