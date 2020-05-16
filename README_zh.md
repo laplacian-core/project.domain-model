@@ -220,11 +220,11 @@ source_repository
   >
   >   这个选项与[generate.sh](<./scripts/generate.sh>)中的同名选项相同。
   >   
-- [./script/publish-local-laplacian-project-domain-model-plugin.generate.sh](<./scripts/publish-local-laplacian-project-domain-model-plugin-generate.sh>)
+- [./script/publish-local-laplacian-project-domain-model-plugin.sh](<./scripts/publish-local-laplacian-project-domain-model-plugin.sh>)
 
   为[laplacian/project.domain-model-plugin](<null>)子项目生成资源。
 
-  > Usage: publish-local-laplacian-project-domain-model-plugin-generate.sh [OPTION]...
+  > Usage: publish-local-laplacian-project-domain-model-plugin.sh [OPTION]...
   >
   > -h, --help
   >

@@ -220,11 +220,11 @@ source_repository
   >
   >   自動生成処理を行わずに、ビルドおよびローカルリポジトリへの登録を行います。
   >   
-- [./script/publish-local-laplacian-project-domain-model-plugin.generate.sh](<./scripts/publish-local-laplacian-project-domain-model-plugin-generate.sh>)
+- [./script/publish-local-laplacian-project-domain-model-plugin.sh](<./scripts/publish-local-laplacian-project-domain-model-plugin.sh>)
 
   [laplacian/project.domain-model-plugin](<null>)サブプロジェクトの資源を自動生成します。
 
-  > Usage: publish-local-laplacian-project-domain-model-plugin-generate.sh [OPTION]...
+  > Usage: publish-local-laplacian-project-domain-model-plugin.sh [OPTION]...
   >
   > -h, --help
   >

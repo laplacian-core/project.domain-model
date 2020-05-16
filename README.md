@@ -226,11 +226,11 @@ source_repository
   >
   >   This option is the same as the option of the same name in [generate.sh](<./scripts/generate.sh>).
   >   
-- [./script/publish-local-laplacian-project-domain-model-plugin.generate.sh](<./scripts/publish-local-laplacian-project-domain-model-plugin-generate.sh>)
+- [./script/publish-local-laplacian-project-domain-model-plugin.sh](<./scripts/publish-local-laplacian-project-domain-model-plugin.sh>)
 
   Generates resources for the [laplacian/project.domain-model-plugin](<null>) subproject.
 
-  > Usage: publish-local-laplacian-project-domain-model-plugin-generate.sh [OPTION]...
+  > Usage: publish-local-laplacian-project-domain-model-plugin.sh [OPTION]...
   >
   > -h, --help
   >

@@ -13,7 +13,7 @@ HELP=
 VERBOSE=
 
 
-run_publish_local_laplacian_project_domain_model_plugin_generate() {
+run_publish_local_laplacian_project_domain_model_plugin() {
   parse_args "$@"
   ! [ -z $VERBOSE ] && set -x
   ! [ -z $HELP ] && show_usage && exit 0
@@ -52,5 +52,5 @@ Usage: $(basename "$0") [OPTION]...
 END
 }
 
-source $SCRIPT_BASE_DIR/.publish-local-laplacian-project-domain-model-plugin-generate/main.sh
-run_publish_local_laplacian_project_domain_model_plugin_generate "$@"
+source $SCRIPT_BASE_DIR/.publish-local-laplacian-project-domain-model-plugin/main.sh
+run_publish_local_laplacian_project_domain_model_plugin "$@"
