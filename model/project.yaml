@@ -17,8 +17,6 @@ project:
   module_repositories:
     local:
       path: ../../../mvn-repo
-      url: https://github.com/nabla-squared/mvn-repo
-      branch: master
     remote:
     - https://github.com/nabla-squared/mvn-repo
   plugins:
