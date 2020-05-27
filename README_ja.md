@@ -134,7 +134,7 @@ source_repository
   >
   >   途中のサブプロジェクトで与えられたコマンドが失敗しても、残りのサブプロジェクトに対してコマンドを実行します。
   >   
-- [./script/generate-laplacian-project-domain-model-plugin.sh](<./scripts/generate-laplacian-project-domain-model-plugin.sh>)
+- [./script/generate-project-domain-model-plugin.sh](<./scripts/generate-project-domain-model-plugin.sh>)
 
   [laplacian/project.domain-model-plugin](<null>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
@@ -142,7 +142,7 @@ source_repository
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
-  > Usage: generate-laplacian-project-domain-model-plugin.sh [OPTION]...
+  > Usage: generate-project-domain-model-plugin.sh [OPTION]...
   >
   > -h, --help
   >
@@ -261,11 +261,11 @@ source_repository
   >
   >   自動生成処理を行わずに、ビルドおよびローカルリポジトリへの登録を行います。
   >   
-- [./script/publish-local-laplacian-project-domain-model-plugin.sh](<./scripts/publish-local-laplacian-project-domain-model-plugin.sh>)
+- [./script/publish-local-project-domain-model-plugin.sh](<./scripts/publish-local-project-domain-model-plugin.sh>)
 
   [laplacian/project.domain-model-plugin](<null>)サブプロジェクトの資源を自動生成します。
 
-  > Usage: publish-local-laplacian-project-domain-model-plugin.sh [OPTION]...
+  > Usage: publish-local-project-domain-model-plugin.sh [OPTION]...
   >
   > -h, --help
   >

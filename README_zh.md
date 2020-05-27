@@ -135,7 +135,7 @@ source_repository
   >
   >   即使给定的命令在中间的一个子项目中失败，对其余的子项目执行该命令。
   >   
-- [./script/generate-laplacian-project-domain-model-plugin.sh](<./scripts/generate-laplacian-project-domain-model-plugin.sh>)
+- [./script/generate-project-domain-model-plugin.sh](<./scripts/generate-project-domain-model-plugin.sh>)
 
   在下面的目录中生成[laplacian/project.domain-model-plugin](<null>)项目，作为子项目。
   ```
@@ -143,7 +143,7 @@ source_repository
   ```
   如果子项目已经存在，则更新子项目的内容。
 
-  > Usage: generate-laplacian-project-domain-model-plugin.sh [OPTION]...
+  > Usage: generate-project-domain-model-plugin.sh [OPTION]...
   >
   > -h, --help
   >
@@ -261,11 +261,11 @@ source_repository
   >
   >   这个选项与[generate.sh](<./scripts/generate.sh>)中的同名选项相同。
   >   
-- [./script/publish-local-laplacian-project-domain-model-plugin.sh](<./scripts/publish-local-laplacian-project-domain-model-plugin.sh>)
+- [./script/publish-local-project-domain-model-plugin.sh](<./scripts/publish-local-project-domain-model-plugin.sh>)
 
   为[laplacian/project.domain-model-plugin](<null>)子项目生成资源。
 
-  > Usage: publish-local-laplacian-project-domain-model-plugin.sh [OPTION]...
+  > Usage: publish-local-project-domain-model-plugin.sh [OPTION]...
   >
   > -h, --help
   >

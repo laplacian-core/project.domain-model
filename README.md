@@ -133,7 +133,7 @@ source_repository
   >
   >   Even if the given command fails in a subproject in the middle, executes it for the remaining subprojects.
   >   
-- [./script/generate-laplacian-project-domain-model-plugin.sh](<./scripts/generate-laplacian-project-domain-model-plugin.sh>)
+- [./script/generate-project-domain-model-plugin.sh](<./scripts/generate-project-domain-model-plugin.sh>)
 
   Generates the [laplacian/project.domain-model-plugin](<null>) project as a subproject in the following directory.
   ```
@@ -141,7 +141,7 @@ source_repository
   ```
   If the subproject already exists, the content of the subproject is updated.
 
-  > Usage: generate-laplacian-project-domain-model-plugin.sh [OPTION]...
+  > Usage: generate-project-domain-model-plugin.sh [OPTION]...
   >
   > -h, --help
   >
@@ -267,11 +267,11 @@ source_repository
   >
   >   This option is the same as the option of the same name in [generate.sh](<./scripts/generate.sh>).
   >   
-- [./script/publish-local-laplacian-project-domain-model-plugin.sh](<./scripts/publish-local-laplacian-project-domain-model-plugin.sh>)
+- [./script/publish-local-project-domain-model-plugin.sh](<./scripts/publish-local-project-domain-model-plugin.sh>)
 
   Generates resources for the [laplacian/project.domain-model-plugin](<null>) subproject.
 
-  > Usage: publish-local-laplacian-project-domain-model-plugin.sh [OPTION]...
+  > Usage: publish-local-project-domain-model-plugin.sh [OPTION]...
   >
   > -h, --help
   >

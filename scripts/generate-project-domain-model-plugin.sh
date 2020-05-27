@@ -14,7 +14,7 @@ VERBOSE=
 CLEAN=
 
 
-run_generate_laplacian_project_domain_model_plugin() {
+run_generate_project_domain_model_plugin() {
   parse_args "$@"
   ! [ -z $VERBOSE ] && set -x
   ! [ -z $HELP ] && show_usage && exit 0
@@ -58,5 +58,5 @@ Usage: $(basename "$0") [OPTION]...
 END
 }
 
-source $SCRIPT_BASE_DIR/.generate-laplacian-project-domain-model-plugin/main.sh
-run_generate_laplacian_project_domain_model_plugin "$@"
+source $SCRIPT_BASE_DIR/.generate-project-domain-model-plugin/main.sh
+run_generate_project_domain_model_plugin "$@"

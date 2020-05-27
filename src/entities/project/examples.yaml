@@ -2,7 +2,8 @@ entities:
 - name: project
   namespace: laplacian.project
   examples:
-  - group: laplacian
+  - |
+    group: laplacian
     name: model.metamodel
     type: model
     namespace: laplacian
