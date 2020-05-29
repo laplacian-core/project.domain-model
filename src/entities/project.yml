@@ -98,7 +98,9 @@ entities:
     snippet: |
       type == "domain-model-plugin"
 
-
+  - name: sources
+    type: string
+    multiple: true
 
   relationships:
   - name: description
@@ -125,6 +127,11 @@ entities:
 
   - name: source_repository
     reference_entity_name: source_repository
+    cardinality: '0..1'
+    aggregate: true
+
+  - name: module_repositories
+    reference_entity_name: module_repository_list
     cardinality: '0..1'
     aggregate: true
 

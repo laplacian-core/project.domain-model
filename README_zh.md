@@ -77,10 +77,14 @@ $ ./script/generate
 
 - [**Document**](<./doc/entities/Document.md>)
 document
+- [**DocumentLanguage**](<./doc/entities/DocumentLanguage.md>)
+document_language
 - [**Section**](<./doc/entities/Section.md>)
 section
 - [**Module**](<./doc/entities/Module.md>)
 module
+- [**ModuleRepositoryList**](<./doc/entities/ModuleRepositoryList.md>)
+module_repository_list
 - [**Project**](<./doc/entities/Project.md>)
 project
 - [**ProjectType**](<./doc/entities/ProjectType.md>)
@@ -281,6 +285,7 @@ source_repository
 - [model/project.yaml](<./model/project.yaml>)
 - [src/entities/document/section.yaml](<./src/entities/document/section.yaml>)
 - [src/entities/document.yaml](<./src/entities/document.yaml>)
+- [src/entities/module_repository_list.yaml](<./src/entities/module_repository_list.yaml>)
 - [src/entities/module.yaml](<./src/entities/module.yaml>)
 - [src/entities/project/examples.yaml](<./src/entities/project/examples.yaml>)
 - [src/entities/project_type.yaml](<./src/entities/project_type.yaml>)

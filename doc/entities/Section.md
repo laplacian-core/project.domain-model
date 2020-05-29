@@ -13,6 +13,13 @@ section
 The name of this section.
 - **Attributes:** *PK*
 
+### order: `Int`
+The order of this section.
+- **Default Value:**
+  ```kotlin
+  9999
+  ```
+
 ## Relationships
 
 ### title: `MultilingualText`

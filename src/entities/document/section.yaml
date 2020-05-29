@@ -7,6 +7,12 @@ entities:
     type: string
     primary_key: true
 
+  - name: order
+    type: number
+    optional: true
+    default_value: |
+      9999
+
   relationships:
   - name: title
     reference_entity_name: multilingual_text

@@ -38,3 +38,7 @@ project
 ### sections: `List<Section>`
 sections
 - **Cardinality:** `*`
+
+### languages: `List<DocumentLanguage>`
+languages
+- **Cardinality:** `1..*`

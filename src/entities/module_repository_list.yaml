@@ -1,0 +1,16 @@
+entities:
+- name: module_repository_list
+  namespace: laplacian.project
+  value_object: true
+
+  properties:
+  - name: local
+    type: string
+    optional: true
+    default_value: |
+      "../mvn-repo"
+
+  - name: remote
+    type: string
+    multiple: true
+    optional: true

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Domain model definition for the project.domain-model project.",
-  "description": "Domain model definition for the project.domain-model project.",
+  "title": "Domain model definition for the project.domain-model-plugin project.",
+  "description": "Domain model definition for the project.domain-model-plugin project.",
   "type": "object",
   "required": [],
   "properties": {
@@ -43,9 +43,6 @@
           "license": {
             "description": "The license of this project.",
             "enum":[
-              "MIT",
-              "Apache2.0",
-              "Closed",
               "MIT",
               "Apache2.0",
               "Closed"
@@ -450,8 +447,6 @@
         "description": "document_language",
         "type": "object",
         "required": [
-          "name",
-          "code"
         ],
         "additionalProperties": false,
         "properties": {
@@ -506,9 +501,6 @@
         "description": "module",
         "type": "object",
         "required": [
-          "name",
-          "group",
-          "version"
         ],
         "additionalProperties": false,
         "properties": {
@@ -551,9 +543,7 @@
         "type": "object",
         "required": [
           "group",
-          "name",
-          "version",
-          "sources"
+          "name"
         ],
         "additionalProperties": false,
         "properties": {
@@ -580,9 +570,6 @@
           "license": {
             "description": "The license of this project.",
             "enum":[
-              "MIT",
-              "Apache2.0",
-              "Closed",
               "MIT",
               "Apache2.0",
               "Closed"
@@ -693,10 +680,6 @@
               "generator",
               "model",
               "template",
-              "plugin",
-              "generator",
-              "model",
-              "template",
               "plugin"
             ],
             "type": "string"
@@ -800,7 +783,6 @@
         "description": "source_repository",
         "type": "object",
         "required": [
-          "url"
         ],
         "additionalProperties": false,
         "properties": {
@@ -818,8 +800,6 @@
         "description": "localized_text",
         "type": "object",
         "required": [
-          "language",
-          "content"
         ],
         "additionalProperties": false,
         "properties": {
@@ -1594,8 +1574,6 @@
         "description": "named_param",
         "type": "object",
         "required": [
-          "name",
-          "type"
         ],
         "additionalProperties": false,
         "properties": {
@@ -1617,8 +1595,6 @@
         "description": "named_value",
         "type": "object",
         "required": [
-          "name",
-          "expression"
         ],
         "additionalProperties": false,
         "properties": {
@@ -1636,7 +1612,8 @@
         "description": "エンティティ",
         "type": "object",
         "required": [
-          "name"
+          "name",
+          "namespace"
         ],
         "additionalProperties": false,
         "properties": {
@@ -1718,8 +1695,7 @@
         "description": "property",
         "type": "object",
         "required": [
-          "name",
-          "type"
+          "name"
         ],
         "additionalProperties": false,
         "properties": {
@@ -1804,8 +1780,6 @@
         "description": "property_mapping",
         "type": "object",
         "required": [
-          "from",
-          "to"
         ],
         "additionalProperties": false,
         "properties": {
@@ -1827,8 +1801,6 @@
         "description": "The queries from which all navigation originates.",
         "type": "object",
         "required": [
-          "name",
-          "snippet"
         ],
         "additionalProperties": false,
         "properties": {
@@ -1874,9 +1846,7 @@
         "description": "relationship",
         "type": "object",
         "required": [
-          "name",
-          "cardinality",
-          "reference_entity_name"
+          "name"
         ],
         "additionalProperties": false,
         "properties": {
@@ -1971,8 +1941,7 @@
         "type": "object",
         "required": [
           "name",
-          "namespace",
-          "type"
+          "namespace"
         ],
         "additionalProperties": false,
         "properties": {
@@ -2010,7 +1979,6 @@
         "description": "value_item",
         "type": "object",
         "required": [
-          "value"
         ],
         "additionalProperties": false,
         "properties": {

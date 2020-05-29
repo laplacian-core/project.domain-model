@@ -25,6 +25,27 @@ templates:
 
 ```
 
+example2:
+```yaml
+group: laplacian
+name: model.metamodel
+type: model
+namespace: laplacian
+description: |
+  A model that expresses the structure of relational model with aggregation support.
+  This model is used to define models from which templates generate resources such as source code or document.
+version: '1.0.0'
+source_repository:
+  url: https://github.com/nabla-squared/laplacian.model.metamodel.git
+  branch: master
+base_dir: subprojects/laplacian.model.metamodel
+templates:
+- group: laplacian
+  name: template.project.base
+  version: '1.0.0'
+
+```
+
 
 ---
 
@@ -125,6 +146,9 @@ Defines this project is is_domain_model_plugin or not.
   type == "domain-model-plugin"
   ```
 
+### sources: `List<String>`
+The sources of this project.
+
 ## Relationships
 
 ### description: `MultilingualText?`
@@ -145,6 +169,10 @@ subprojects
 
 ### source_repository: `SourceRepository?`
 source_repository
+- **Cardinality:** `0..1`
+
+### module_repositories: `ModuleRepositoryList?`
+module_repositories
 - **Cardinality:** `0..1`
 
 ### document: `Document?`
