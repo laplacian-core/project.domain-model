@@ -13,9 +13,21 @@ entities:
     default_value: |
       false
 
+  - name: is_interactive
+    type: boolean
+    optional: true
+    default_value: |
+      false
+
+  - name: prompt
+    type: string
+    optional: true
+
   - name: default_value
     type: string
     optional: true
+    default_value: |
+      ""
 
   - name: is_multiple
     type: boolean
