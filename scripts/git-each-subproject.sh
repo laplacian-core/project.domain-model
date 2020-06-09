@@ -4,7 +4,6 @@ PROJECT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}/../" && pwd)
 
 SCRIPT_BASE_DIR="$PROJECT_BASE_DIR/scripts"
 
-LOCAL_REPO_PATH="$PROJECT_BASE_DIR/../../../mvn-repo"
 
 OPT_NAMES='hvc-:'
 
@@ -18,6 +17,8 @@ run_git_each_subproject() {
   parse_args "$@"
   ! [ -z $VERBOSE ] && set -x
   ! [ -z $HELP ] && show_usage && exit 0
+
+  source $SCRIPT_BASE_DIR/.git-each-subproject/main.sh
   main
 }
 
@@ -58,5 +59,4 @@ Usage: ./scripts/git-each-subproject.sh [OPTION]...
 END
 }
 
-source $SCRIPT_BASE_DIR/.git-each-subproject/main.sh
 run_git_each_subproject "$@"

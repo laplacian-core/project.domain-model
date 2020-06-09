@@ -14,5 +14,5 @@ main() {
 }
 
 run_generate() {
-  $PROJECT_BASE_DIR/$SCRIPTS_DIR/generate-laplacian-project-domain-model-plugin.sh
+  $PROJECT_BASE_DIR/$SCRIPTS_DIR/generate-project-domain-model-plugin.sh
 }

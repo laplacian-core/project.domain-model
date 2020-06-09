@@ -1,21 +1,24 @@
 #!/usr/bin/env bash
 
+MODEL_DIR='model'
+PROJECT_MODEL_FILE="$MODEL_DIR/project.yaml"
+MODEL_SCHEMA_PARTIAL='model-schema-partial.json'
+MODEL_SCHEMA_FULL='model-schema-full.json'
+
 SCRIPTS_DIR='scripts'
-GENERATOR_SCRIPT='generate.sh'
+PROJECT_GENERATOR="$SCRIPTS_DIR/generate.sh"
+PROJECT_GENERATOR_MAIN="$SCRIPTS_DIR/.generate/main.sh"
 LAPLACIAN_GENERATOR="$SCRIPTS_DIR/laplacian-generate.sh"
+VSCODE_SETTING=".vscode/settings.json"
+
 TARGET_PROJECT_DIR="$PROJECT_BASE_DIR/subprojects/laplacian.project.domain-model-plugin"
-TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
+TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/$MODEL_DIR"
 TARGET_SCRIPT_DIR="$TARGET_PROJECT_DIR/$SCRIPTS_DIR"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
-RAW_HOST='https://raw.githubusercontent.com/nabla-squared/laplacian.generator.project-template/master'
-
 main() {
   create_project_model_file
-  if ! [ -f $TARGET_SCRIPT_DIR/$GENERATOR_SCRIPT ]
-  then
-    install_generator
-  fi
+  install_generator
   run_generator
 }
 
@@ -50,36 +53,32 @@ END_FILE
 }
 
 install_generator() {
-  local TMP_DIR=".TMP"
-  mkdir -p $TARGET_SCRIPT_DIR
   (cd $TARGET_PROJECT_DIR
-    curl -Ls -o ./$LAPLACIAN_GENERATOR $RAW_HOST/$LAPLACIAN_GENERATOR
-    chmod 755 ./$LAPLACIAN_GENERATOR
-    $LAPLACIAN_GENERATOR \
-      --plugin 'laplacian:laplacian.project.domain-model-plugin:1.0.0' \
-      --plugin 'laplacian:laplacian.common-model-plugin:1.0.0' \
-      --template 'laplacian:laplacian.generator.project-template:1.0.0' \
-      --model 'laplacian:laplacian.project.project-types:1.0.0' \
-      --model-files 'model/project.yaml' \
-      --model-files "$TMP_DIR/model/" \
-      --local-repo '../../../../../mvn-repo' \
-      --target-dir "$TMP_DIR"
-    $LAPLACIAN_GENERATOR \
-      --plugin 'laplacian:laplacian.project.domain-model-plugin:1.0.0' \
-      --plugin 'laplacian:laplacian.common-model-plugin:1.0.0' \
-      --template 'laplacian:laplacian.generator.project-template:1.0.0' \
-      --model 'laplacian:laplacian.project.project-types:1.0.0' \
-      --model-files 'model/project.yaml' \
-      --model-files "$TMP_DIR/model/" \
-      --local-repo '../../../../../mvn-repo' \
-      --target-dir "$TMP_DIR"
+    install_file $LAPLACIAN_GENERATOR
+    install_file $PROJECT_GENERATOR
+    install_file $PROJECT_GENERATOR_MAIN
+    install_file $VSCODE_SETTING
+    install_file $MODEL_SCHEMA_FULL
+    install_file $MODEL_SCHEMA_PARTIAL
   )
-  trap "rm -rf $TARGET_PROJECT_DIR/$TMP_DIR" EXIT
-  mkdir -p $TARGET_SCRIPT_DIR
-  rm -rf $TARGET_SCRIPT_DIR
-  mv "$TARGET_PROJECT_DIR/$TMP_DIR/scripts" $TARGET_SCRIPT_DIR
+}
+
+install_file() {
+  local rel_path="$1"
+  local dir_path=$(dirname $rel_path)
+  if [ ! -z $dir_path ] && [ ! -d $dir_path ]
+  then
+    mkdir -p $dir_path
+  fi
+  cp "$PROJECT_BASE_DIR/$rel_path" $rel_path
 }
 
 run_generator() {
-  $TARGET_SCRIPT_DIR/$GENERATOR_SCRIPT
+  $TARGET_PROJECT_DIR/$PROJECT_GENERATOR \
+    --local-module-repository '../../../../../mvn-repo' \
+    --updates-scripts-only
+
+  # We need to run it twice as the generate.sh itself may be updated in the first run.
+  $TARGET_PROJECT_DIR/$PROJECT_GENERATOR \
+    --local-module-repository '../../../../../mvn-repo'
 }
