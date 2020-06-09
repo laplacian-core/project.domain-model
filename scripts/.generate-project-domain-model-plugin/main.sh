@@ -11,7 +11,7 @@ PROJECT_GENERATOR_MAIN="$SCRIPTS_DIR/.generate/main.sh"
 LAPLACIAN_GENERATOR="$SCRIPTS_DIR/laplacian-generate.sh"
 VSCODE_SETTING=".vscode/settings.json"
 
-TARGET_PROJECT_DIR="$PROJECT_BASE_DIR/subprojects/laplacian.project.domain-model-plugin"
+TARGET_PROJECT_DIR="$PROJECT_BASE_DIR/subprojects/project-domain-model-plugin"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/$MODEL_DIR"
 TARGET_SCRIPT_DIR="$TARGET_PROJECT_DIR/$SCRIPTS_DIR"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"

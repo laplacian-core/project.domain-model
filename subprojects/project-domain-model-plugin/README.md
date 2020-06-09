@@ -91,6 +91,17 @@ A domain model plugin module for the project.domain-model.
   >   when the contents of the `model/` `template/` directory are updated
   >   during the generation process.
   >    (Default: 10)
+  > , --local-module-repository [VALUE]
+  >
+  >   The repository path to store locally built modules.
+  >   The modules in this repository have the highest priority.
+  >   
+  > , --updates-scripts-only
+  >
+  >   Updates script files only.
+  >   This option is used to generate the generator script itself
+  >   when the project is initially generated.
+  >   
 - [./script/publish-local.sh](<./scripts/publish-local.sh>)
 
   After the resources in the project are generated,
@@ -114,6 +125,11 @@ A domain model plugin module for the project.domain-model.
   > , --skip-generation
   >
   >   This option is the same as the option of the same name in [generate.sh](<./scripts/generate.sh>).
+  >   
+  > , --local-module-repository [VALUE]
+  >
+  >   The path to the local repository where the built module will be stored.
+  >   If the repository does not exist in the specified path, it will be created automatically.
   >   
 ### Source code list
 

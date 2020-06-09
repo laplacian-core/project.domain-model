@@ -143,7 +143,7 @@ source_repository
 
   在下面的目录中生成[laplacian/project.domain-model-plugin](<null>)项目，作为子项目。
   ```
-  subprojects/laplacian.project.domain-model-plugin
+  subprojects/project-domain-model-plugin
   ```
   如果子项目已经存在，则更新子项目的内容。
 

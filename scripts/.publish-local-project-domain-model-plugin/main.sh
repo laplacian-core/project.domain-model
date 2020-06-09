@@ -2,7 +2,7 @@
 
 SCRIPTS_DIR='scripts'
 PUBLISH_SCRIPT='publish-local.sh'
-TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/laplacian.project.domain-model-plugin"
+TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/project-domain-model-plugin"
 TARGET_PUBLISH_SCRIPT="$TARGET_PROJECT_DIR/$SCRIPTS_DIR/$PUBLISH_SCRIPT"
 
 main() {

@@ -142,7 +142,7 @@ source_repository
 
   [laplacian/project.domain-model-plugin](<null>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
-  subprojects/laplacian.project.domain-model-plugin
+  subprojects/project-domain-model-plugin
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 

@@ -108,7 +108,7 @@ The template_files of this project.
 The base_dir of this project.
 - **Default Value:**
   ```kotlin
-  "subprojects/${group}.${name}"
+  "subprojects/${name.lowerHyphenize()}"
   ```
 
 ### is_model: `Boolean`

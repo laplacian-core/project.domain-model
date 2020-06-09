@@ -16,14 +16,7 @@ project:
       ../../../../../mvn-repo
     remote:
     - https://github.com/nabla-squared/mvn-repo
-  plugins:
-  - group: laplacian
-    name: common-model-plugin
-    version: '1.0.0'
   models:
   - group: laplacian
     name: project.domain-model
-    version: '1.0.0'
-  - group: laplacian
-    name: common-model
     version: '1.0.0'

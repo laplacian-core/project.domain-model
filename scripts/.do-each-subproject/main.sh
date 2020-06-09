@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SUBPROJECTS='subprojects/laplacian.project.domain-model-plugin
+SUBPROJECTS='subprojects/project-domain-model-plugin
 '
 
 main() {

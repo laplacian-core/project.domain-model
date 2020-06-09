@@ -141,7 +141,7 @@ source_repository
 
   Generates the [laplacian/project.domain-model-plugin](<null>) project as a subproject in the following directory.
   ```
-  subprojects/laplacian.project.domain-model-plugin
+  subprojects/project-domain-model-plugin
   ```
   If the subproject already exists, the content of the subproject is updated.
 
