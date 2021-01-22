@@ -1,7 +1,7 @@
 # **Module**
 **namespace:** laplacian.project
 
-module
+An entity describing a module.
 
 
 

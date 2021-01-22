@@ -1,7 +1,7 @@
 # **Document**
 **namespace:** laplacian.project
 
-document
+An entity describing a document.
 
 
 
@@ -32,13 +32,13 @@ The abstract of this document.
 ## Relationships
 
 ### project: `Project`
-project
+The project of this document.
 - **Cardinality:** `1`
 
 ### sections: `List<Section>`
-sections
+The sections of this document.
 - **Cardinality:** `*`
 
 ### languages: `List<DocumentLanguage>`
-languages
+The languages of this document.
 - **Cardinality:** `1..*`

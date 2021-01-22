@@ -2,6 +2,8 @@
 *.tmp
 *.log
 *.swp
+*.backup
+*.zip
 
 # General - Windows
 Thumbs.db
@@ -31,6 +33,14 @@ out/
 # Laplacian projects
 .NEXT/
 .PREV/
-/dest/
-subprojects/mvn-repo/
-subprojects/mvn-repo
+dest/*
+# @+additional-entries@
+# @additional-entries@
+
+
+# GCP
+.gcloud/
+
+# Terraform
+.terraform/
+*.tfstate

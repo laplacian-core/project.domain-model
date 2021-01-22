@@ -1,7 +1,7 @@
 # **SourceRepository**
 **namespace:** laplacian.project
 
-source_repository
+An entity describing a source_repository.
 
 
 

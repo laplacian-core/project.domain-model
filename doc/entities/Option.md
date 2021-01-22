@@ -1,7 +1,7 @@
 # **Option**
 **namespace:** laplacian.project.script
 
-option
+An entity describing a option.
 
 
 
@@ -57,5 +57,5 @@ The short_name of this option.
 ## Relationships
 
 ### description: `MultilingualText?`
-description
+The description of this option.
 - **Cardinality:** `0..1`

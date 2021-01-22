@@ -51,5 +51,6 @@ entities:
   relationships:
   - name: description
     reference_entity_name: multilingual_text
+    reference_entity_namespace: laplacian.common
     cardinality: '0..1'
     aggregate: true

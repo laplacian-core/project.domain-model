@@ -1,7 +1,7 @@
 # **Section**
 **namespace:** laplacian.project.document
 
-section
+An entity describing a section.
 
 
 
@@ -23,17 +23,17 @@ The order of this section.
 ## Relationships
 
 ### title: `MultilingualText`
-title
+The title of this section.
 - **Cardinality:** `1`
 
 ### content: `MultilingualText?`
-content
+The content of this section.
 - **Cardinality:** `0..1`
 
 ### sub_sections: `List<Section>`
-sub_sections
+The sub_sections of this section.
 - **Cardinality:** `*`
 
 ### parent_section: `Section?`
-parent_section
+The parent_section of this section.
 - **Cardinality:** `0..1`

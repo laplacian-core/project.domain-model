@@ -75,91 +75,28 @@ $ ./script/generate
 
 
 - [**Document**](<./doc/entities/Document.md>)
-document
+An entity describing a document.
 - [**DocumentLanguage**](<./doc/entities/DocumentLanguage.md>)
-document_language
+An entity describing a document_language.
 - [**Section**](<./doc/entities/Section.md>)
-section
+An entity describing a section.
 - [**Module**](<./doc/entities/Module.md>)
-module
+An entity describing a module.
 - [**ModuleRepositoryList**](<./doc/entities/ModuleRepositoryList.md>)
-module_repository_list
+An entity describing a module_repository_list.
 - [**Project**](<./doc/entities/Project.md>)
-project
+An entity describing a project.
 - [**ProjectType**](<./doc/entities/ProjectType.md>)
-project_type
+An entity describing a project_type.
 - [**Script**](<./doc/entities/Script.md>)
-script
+An entity describing a script.
 - [**Option**](<./doc/entities/Option.md>)
-option
+An entity describing a option.
 - [**SourceRepository**](<./doc/entities/SourceRepository.md>)
-source_repository
+An entity describing a source_repository.
 ### スクリプト一覧
 
 
-- [./script/do-each-subproject.sh](<./scripts/do-each-subproject.sh>)
-
-  各サブプロジェクトに対して、引数で指定されたコマンドを一括で実行します。
-
-  使用例:
-  ```console
-  $ ./scripts/null -c git status
-  ```
-
-  > Usage: do-each-subproject.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-  > -c, --continue-on-error
-  >
-  >   途中のサブプロジェクトで与えられたコマンドが失敗しても、残りのサブプロジェクトに対してコマンドを実行します。
-  >   
-- [./script/generate-all.sh](<./scripts/generate-all.sh>)
-
-  サブプロジェクトを含むプロジェクト内の資源を自動生成します。
-
-  > Usage: generate-all.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-  > -c, --continue-on-error
-  >
-  >   途中のサブプロジェクトで与えられたコマンドが失敗しても、残りのサブプロジェクトに対してコマンドを実行します。
-  >   
-- [./script/generate-project-domain-model-plugin.sh](<./scripts/generate-project-domain-model-plugin.sh>)
-
-  [laplacian/project.domain-model-plugin](<null>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
-  ```
-  subprojects/project-domain-model-plugin
-  ```
-  すでにそのサブプロジェクトが存在する場合はその内容を更新します。
-
-  > Usage: generate-project-domain-model-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-  > -c, --clean
-  >
-  >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
-  >   
 - [./script/generate.sh](<./scripts/generate.sh>)
 
   このプロジェクト内の資源を自動生成します。
@@ -229,29 +166,6 @@ source_repository
   >   スクリプトファイルのみを更新の対象とします。
   >   プロジェクトを初期生成する際、自動生成スクリプト自体を初回作成する場合などに指定します。
   >   
-- [./script/git-each-subproject.sh](<./scripts/git-each-subproject.sh>)
-
-  各サブプロジェクトに対して、引数で指定されたGitサブコマンドを一括実行します。
-
-  使用例:
-  ```console
-  $ ./scripts/null -c status
-  ```
-
-  > Usage: git-each-subproject.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-  > -c, --continue-on-error
-  >
-  >   途中のサブプロジェクトで与えられたコマンドが失敗しても、残りのサブプロジェクトに対してコマンドを実行します。
-  >   
 - [./script/publish-local.sh](<./scripts/publish-local.sh>)
 
   プロジェクト内の資源を自動生成した後、ディレクトリにある資源をモデルモジュールとしてビルドし、
@@ -280,34 +194,20 @@ source_repository
   >   ビルドしたモジュールを格納するローカルリポジトリのパス。
   >   指定したパスにリポジトリが存在しない場合は、自動的に作成されます。
   >   
-- [./script/publish-local-project-domain-model-plugin.sh](<./scripts/publish-local-project-domain-model-plugin.sh>)
-
-  [laplacian/project.domain-model-plugin](<null>)サブプロジェクトの資源を自動生成します。
-
-  > Usage: publish-local-project-domain-model-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
 ### ソースコード一覧
 
 
 - [model/project.yaml](<./model/project.yaml>)
-- [src/entities/document/section.yaml](<./src/entities/document/section.yaml>)
-- [src/entities/document.yaml](<./src/entities/document.yaml>)
-- [src/entities/module_repository_list.yaml](<./src/entities/module_repository_list.yaml>)
-- [src/entities/module.yaml](<./src/entities/module.yaml>)
-- [src/entities/project/examples.yaml](<./src/entities/project/examples.yaml>)
-- [src/entities/project_type.yaml](<./src/entities/project_type.yaml>)
-- [src/entities/project.yml](<./src/entities/project.yml>)
-- [src/entities/script/option.yaml](<./src/entities/script/option.yaml>)
-- [src/entities/script.yaml](<./src/entities/script.yaml>)
-- [src/entities/source_repository.yaml](<./src/entities/source_repository.yaml>)
+- [src/model/entities/document/section.yaml](<./src/model/entities/document/section.yaml>)
+- [src/model/entities/document.yaml](<./src/model/entities/document.yaml>)
+- [src/model/entities/module_repository_list.yaml](<./src/model/entities/module_repository_list.yaml>)
+- [src/model/entities/module.yaml](<./src/model/entities/module.yaml>)
+- [src/model/entities/project/examples.yaml](<./src/model/entities/project/examples.yaml>)
+- [src/model/entities/project_type.yaml](<./src/model/entities/project_type.yaml>)
+- [src/model/entities/project.yml](<./src/model/entities/project.yml>)
+- [src/model/entities/script/option.yaml](<./src/model/entities/script/option.yaml>)
+- [src/model/entities/script.yaml](<./src/model/entities/script.yaml>)
+- [src/model/entities/source_repository.yaml](<./src/model/entities/source_repository.yaml>)
 
 
 <!-- @main-content@ -->

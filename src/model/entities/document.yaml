@@ -31,11 +31,13 @@ entities:
 
   - name: sections
     reference_entity_name: section
+    reference_entity_namespace: laplacian.project.document
     cardinality: '*'
     aggregate: true
 
   - name: languages
     reference_entity_name: document_language
+    reference_entity_namespace: laplacian.project.document
     cardinality: '1..*'
     aggregate: true
 

@@ -16,11 +16,13 @@ entities:
   relationships:
   - name: title
     reference_entity_name: multilingual_text
+    reference_entity_namespace: laplacian.common
     cardinality: '1'
     aggregate: true
 
   - name: content
     reference_entity_name: multilingual_text
+    reference_entity_namespace: laplacian.common
     cardinality: '0..1'
     aggregate: true
 

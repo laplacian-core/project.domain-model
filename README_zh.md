@@ -76,91 +76,28 @@ $ ./script/generate
 
 
 - [**Document**](<./doc/entities/Document.md>)
-document
+An entity describing a document.
 - [**DocumentLanguage**](<./doc/entities/DocumentLanguage.md>)
-document_language
+An entity describing a document_language.
 - [**Section**](<./doc/entities/Section.md>)
-section
+An entity describing a section.
 - [**Module**](<./doc/entities/Module.md>)
-module
+An entity describing a module.
 - [**ModuleRepositoryList**](<./doc/entities/ModuleRepositoryList.md>)
-module_repository_list
+An entity describing a module_repository_list.
 - [**Project**](<./doc/entities/Project.md>)
-project
+An entity describing a project.
 - [**ProjectType**](<./doc/entities/ProjectType.md>)
-project_type
+An entity describing a project_type.
 - [**Script**](<./doc/entities/Script.md>)
-script
+An entity describing a script.
 - [**Option**](<./doc/entities/Option.md>)
-option
+An entity describing a option.
 - [**SourceRepository**](<./doc/entities/SourceRepository.md>)
-source_repository
+An entity describing a source_repository.
 ### 命令列表
 
 
-- [./script/do-each-subproject.sh](<./scripts/do-each-subproject.sh>)
-
-  为每个子项目执行参数指定的命令。
-
-  例子:
-  ```console
-  $ ./scripts/null -c git status
-  ```
-
-  > Usage: do-each-subproject.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-  > -c, --continue-on-error
-  >
-  >   即使给定的命令在中间的一个子项目中失败，对其余的子项目执行该命令。
-  >   
-- [./script/generate-all.sh](<./scripts/generate-all.sh>)
-
-  生成项目中的资源，包括子项目。
-
-  > Usage: generate-all.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-  > -c, --continue-on-error
-  >
-  >   即使给定的命令在中间的一个子项目中失败，对其余的子项目执行该命令。
-  >   
-- [./script/generate-project-domain-model-plugin.sh](<./scripts/generate-project-domain-model-plugin.sh>)
-
-  在下面的目录中生成[laplacian/project.domain-model-plugin](<null>)项目，作为子项目。
-  ```
-  subprojects/project-domain-model-plugin
-  ```
-  如果子项目已经存在，则更新子项目的内容。
-
-  > Usage: generate-project-domain-model-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-  > -c, --clean
-  >
-  >   删除子项目的所有本地资源，并对其进行再生。
-  >   
 - [./script/generate.sh](<./scripts/generate.sh>)
 
   生成本项目中每个`src/` `model/` `template/`目录下的资源。
@@ -230,29 +167,6 @@ source_repository
   >   仅更新脚本文件。
   >   这个选项在项目初始生成时用于生成生成器脚本本身。
   >   
-- [./script/git-each-subproject.sh](<./scripts/git-each-subproject.sh>)
-
-  执行参数为每个子项目指定的git子命令。
-
-  例子:
-  ```console
-  $ ./scripts/null -c status
-  ```
-
-  > Usage: git-each-subproject.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-  > -c, --continue-on-error
-  >
-  >   即使给定的命令在中间的一个子项目中失败，对其余的子项目执行该命令。
-  >   
 - [./script/publish-local.sh](<./scripts/publish-local.sh>)
 
   项目中的资源生成后，在`./dest`目录下的资源作为模型模块建立，并在本地资源库中注册。
@@ -280,34 +194,20 @@ source_repository
   >   到本地存储库的路径。
   >   如果在指定的路径中不存在存储库，将自动创建。
   >   
-- [./script/publish-local-project-domain-model-plugin.sh](<./scripts/publish-local-project-domain-model-plugin.sh>)
-
-  为[laplacian/project.domain-model-plugin](<null>)子项目生成资源。
-
-  > Usage: publish-local-project-domain-model-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
 ### 源码列表
 
 
 - [model/project.yaml](<./model/project.yaml>)
-- [src/entities/document/section.yaml](<./src/entities/document/section.yaml>)
-- [src/entities/document.yaml](<./src/entities/document.yaml>)
-- [src/entities/module_repository_list.yaml](<./src/entities/module_repository_list.yaml>)
-- [src/entities/module.yaml](<./src/entities/module.yaml>)
-- [src/entities/project/examples.yaml](<./src/entities/project/examples.yaml>)
-- [src/entities/project_type.yaml](<./src/entities/project_type.yaml>)
-- [src/entities/project.yml](<./src/entities/project.yml>)
-- [src/entities/script/option.yaml](<./src/entities/script/option.yaml>)
-- [src/entities/script.yaml](<./src/entities/script.yaml>)
-- [src/entities/source_repository.yaml](<./src/entities/source_repository.yaml>)
+- [src/model/entities/document/section.yaml](<./src/model/entities/document/section.yaml>)
+- [src/model/entities/document.yaml](<./src/model/entities/document.yaml>)
+- [src/model/entities/module_repository_list.yaml](<./src/model/entities/module_repository_list.yaml>)
+- [src/model/entities/module.yaml](<./src/model/entities/module.yaml>)
+- [src/model/entities/project/examples.yaml](<./src/model/entities/project/examples.yaml>)
+- [src/model/entities/project_type.yaml](<./src/model/entities/project_type.yaml>)
+- [src/model/entities/project.yml](<./src/model/entities/project.yml>)
+- [src/model/entities/script/option.yaml](<./src/model/entities/script/option.yaml>)
+- [src/model/entities/script.yaml](<./src/model/entities/script.yaml>)
+- [src/model/entities/source_repository.yaml](<./src/model/entities/source_repository.yaml>)
 
 
 <!-- @main-content@ -->

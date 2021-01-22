@@ -1,7 +1,7 @@
 # **Script**
 **namespace:** laplacian.project
 
-script
+An entity describing a script.
 
 
 
@@ -16,9 +16,9 @@ The name of this script.
 ## Relationships
 
 ### description: `MultilingualText?`
-description
+The description of this script.
 - **Cardinality:** `0..1`
 
 ### options: `List<Option>`
-options
+The options of this script.
 - **Cardinality:** `*`

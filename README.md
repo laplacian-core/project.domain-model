@@ -74,91 +74,28 @@ $ ./script/generate
 
 
 - [**Document**](<./doc/entities/Document.md>)
-document
+An entity describing a document.
 - [**DocumentLanguage**](<./doc/entities/DocumentLanguage.md>)
-document_language
+An entity describing a document_language.
 - [**Section**](<./doc/entities/Section.md>)
-section
+An entity describing a section.
 - [**Module**](<./doc/entities/Module.md>)
-module
+An entity describing a module.
 - [**ModuleRepositoryList**](<./doc/entities/ModuleRepositoryList.md>)
-module_repository_list
+An entity describing a module_repository_list.
 - [**Project**](<./doc/entities/Project.md>)
-project
+An entity describing a project.
 - [**ProjectType**](<./doc/entities/ProjectType.md>)
-project_type
+An entity describing a project_type.
 - [**Script**](<./doc/entities/Script.md>)
-script
+An entity describing a script.
 - [**Option**](<./doc/entities/Option.md>)
-option
+An entity describing a option.
 - [**SourceRepository**](<./doc/entities/SourceRepository.md>)
-source_repository
+An entity describing a source_repository.
 ### Script List
 
 
-- [./script/do-each-subproject.sh](<./scripts/do-each-subproject.sh>)
-
-  Executes the command specified by the argument for each subproject.
-
-  Example:
-  ```console
-  $ ./scripts/null -c git status
-  ```
-
-  > Usage: do-each-subproject.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   Displays how to use this command.
-  >   
-  > -v, --verbose
-  >
-  >   Displays more detailed command execution information.
-  >   
-  > -c, --continue-on-error
-  >
-  >   Even if the given command fails in a subproject in the middle, executes it for the remaining subprojects.
-  >   
-- [./script/generate-all.sh](<./scripts/generate-all.sh>)
-
-  Generates resources in the project, including subprojects.
-
-  > Usage: generate-all.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   Displays how to use this command.
-  >   
-  > -v, --verbose
-  >
-  >   Displays more detailed command execution information.
-  >   
-  > -c, --continue-on-error
-  >
-  >   Even if the given command fails in a subproject in the middle, executes it for the remaining subprojects.
-  >   
-- [./script/generate-project-domain-model-plugin.sh](<./scripts/generate-project-domain-model-plugin.sh>)
-
-  Generates the [laplacian/project.domain-model-plugin](<null>) project as a subproject in the following directory.
-  ```
-  subprojects/project-domain-model-plugin
-  ```
-  If the subproject already exists, the content of the subproject is updated.
-
-  > Usage: generate-project-domain-model-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   Displays how to use this command.
-  >   
-  > -v, --verbose
-  >
-  >   Displays more detailed command execution information.
-  >   
-  > -c, --clean
-  >
-  >   Delete all local resources of the subproject and regenerate them.
-  >   
 - [./script/generate.sh](<./scripts/generate.sh>)
 
   Generates the resources in each directory of `src/` `model/` `template/` in this project.
@@ -235,29 +172,6 @@ source_repository
   >   This option is used to generate the generator script itself
   >   when the project is initially generated.
   >   
-- [./script/git-each-subproject.sh](<./scripts/git-each-subproject.sh>)
-
-  Executes the git sub-command specified by the argument for each subproject.
-
-  Example:
-  ```console
-  $ ./scripts/null -c status
-  ```
-
-  > Usage: git-each-subproject.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   Displays how to use this command.
-  >   
-  > -v, --verbose
-  >
-  >   Displays more detailed command execution information.
-  >   
-  > -c, --continue-on-error
-  >
-  >   Even if the given command fails in a subproject in the middle, executes it for the remaining subprojects.
-  >   
 - [./script/publish-local.sh](<./scripts/publish-local.sh>)
 
   After the resources in the project are generated,
@@ -287,34 +201,20 @@ source_repository
   >   The path to the local repository where the built module will be stored.
   >   If the repository does not exist in the specified path, it will be created automatically.
   >   
-- [./script/publish-local-project-domain-model-plugin.sh](<./scripts/publish-local-project-domain-model-plugin.sh>)
-
-  Generates resources for the [laplacian/project.domain-model-plugin](<null>) subproject.
-
-  > Usage: publish-local-project-domain-model-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   Displays how to use this command.
-  >   
-  > -v, --verbose
-  >
-  >   Displays more detailed command execution information.
-  >   
 ### Source code list
 
 
 - [model/project.yaml](<./model/project.yaml>)
-- [src/entities/document/section.yaml](<./src/entities/document/section.yaml>)
-- [src/entities/document.yaml](<./src/entities/document.yaml>)
-- [src/entities/module_repository_list.yaml](<./src/entities/module_repository_list.yaml>)
-- [src/entities/module.yaml](<./src/entities/module.yaml>)
-- [src/entities/project/examples.yaml](<./src/entities/project/examples.yaml>)
-- [src/entities/project_type.yaml](<./src/entities/project_type.yaml>)
-- [src/entities/project.yml](<./src/entities/project.yml>)
-- [src/entities/script/option.yaml](<./src/entities/script/option.yaml>)
-- [src/entities/script.yaml](<./src/entities/script.yaml>)
-- [src/entities/source_repository.yaml](<./src/entities/source_repository.yaml>)
+- [src/model/entities/document/section.yaml](<./src/model/entities/document/section.yaml>)
+- [src/model/entities/document.yaml](<./src/model/entities/document.yaml>)
+- [src/model/entities/module_repository_list.yaml](<./src/model/entities/module_repository_list.yaml>)
+- [src/model/entities/module.yaml](<./src/model/entities/module.yaml>)
+- [src/model/entities/project/examples.yaml](<./src/model/entities/project/examples.yaml>)
+- [src/model/entities/project_type.yaml](<./src/model/entities/project_type.yaml>)
+- [src/model/entities/project.yml](<./src/model/entities/project.yml>)
+- [src/model/entities/script/option.yaml](<./src/model/entities/script/option.yaml>)
+- [src/model/entities/script.yaml](<./src/model/entities/script.yaml>)
+- [src/model/entities/source_repository.yaml](<./src/model/entities/source_repository.yaml>)
 
 
 <!-- @main-content@ -->

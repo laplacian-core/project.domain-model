@@ -1,7 +1,7 @@
 # **DocumentLanguage**
 **namespace:** laplacian.project.document
 
-document_language
+An entity describing a document_language.
 
 
 

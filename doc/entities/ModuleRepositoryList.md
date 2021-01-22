@@ -1,7 +1,7 @@
 # **ModuleRepositoryList**
 **namespace:** laplacian.project
 
-module_repository_list
+An entity describing a module_repository_list.
 
 
 

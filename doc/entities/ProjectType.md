@@ -1,7 +1,7 @@
 # **ProjectType**
 **namespace:** laplacian.project
 
-project_type
+An entity describing a project_type.
 
 
 
@@ -33,23 +33,23 @@ The base_type_name of this project_type.
 ## Relationships
 
 ### base_type: `ProjectType?`
-base_type
+The base_type of this project_type.
 - **Cardinality:** `0..1`
 
 ### models: `List<Module>`
-models
+The models of this project_type.
 - **Cardinality:** `*`
 
 ### templates: `List<Module>`
-templates
+The templates of this project_type.
 - **Cardinality:** `*`
 
 ### plugins: `List<Module>`
-plugins
+The plugins of this project_type.
 - **Cardinality:** `*`
 
 ### all_models: `List<Module>`
-all_models
+The all_models of this project_type.
 - **Cardinality:** `*`
 - **Code:**
   ```kotlin
@@ -57,7 +57,7 @@ all_models
   ```
 
 ### all_templates: `List<Module>`
-all_templates
+The all_templates of this project_type.
 - **Cardinality:** `*`
 - **Code:**
   ```kotlin
@@ -65,7 +65,7 @@ all_templates
   ```
 
 ### all_plugins: `List<Module>`
-all_plugins
+The all_plugins of this project_type.
 - **Cardinality:** `*`
 - **Code:**
   ```kotlin

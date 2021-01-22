@@ -1,7 +1,7 @@
 # **Project**
 **namespace:** laplacian.project
 
-project
+An entity describing a project.
 
 
 example1:
@@ -152,51 +152,51 @@ The sources of this project.
 ## Relationships
 
 ### description: `MultilingualText?`
-description
+The description of this project.
 - **Cardinality:** `0..1`
 
 ### project_type: `ProjectType`
-project_type
+The project_type of this project.
 - **Cardinality:** `1`
 
 ### parent_project: `Project?`
-parent_project
+The parent_project of this project.
 - **Cardinality:** `0..1`
 
 ### subprojects: `List<Project>`
-subprojects
+The subprojects of this project.
 - **Cardinality:** `*`
 
 ### source_repository: `SourceRepository?`
-source_repository
+The source_repository of this project.
 - **Cardinality:** `0..1`
 
 ### module_repositories: `ModuleRepositoryList?`
-module_repositories
+The module_repositories of this project.
 - **Cardinality:** `0..1`
 
 ### document: `Document?`
-document
+The document of this project.
 - **Cardinality:** `0..1`
 
 ### scripts: `List<Script>`
-scripts
+The scripts of this project.
 - **Cardinality:** `*`
 
 ### models: `List<Module>`
-models
+The models of this project.
 - **Cardinality:** `*`
 
 ### templates: `List<Module>`
-templates
+The templates of this project.
 - **Cardinality:** `*`
 
 ### plugins: `List<Module>`
-plugins
+The plugins of this project.
 - **Cardinality:** `*`
 
 ### all_models: `List<Module>`
-all_models
+The all_models of this project.
 - **Cardinality:** `*`
 - **Code:**
   ```kotlin
@@ -204,7 +204,7 @@ all_models
   ```
 
 ### all_templates: `List<Module>`
-all_templates
+The all_templates of this project.
 - **Cardinality:** `*`
 - **Code:**
   ```kotlin
@@ -212,7 +212,7 @@ all_templates
   ```
 
 ### all_plugins: `List<Module>`
-all_plugins
+The all_plugins of this project.
 - **Cardinality:** `*`
 - **Code:**
   ```kotlin
